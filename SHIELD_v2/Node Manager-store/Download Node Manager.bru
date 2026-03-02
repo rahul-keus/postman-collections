@@ -1,0 +1,26 @@
+meta {
+  name: Download Node Manager
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{BASE_URL}}/v1/node_manager_store/gateway.download_node_manager
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJkZW1vX3VzZXIiLCJ1c2VyTmFtZSI6IkRlbW8gVXNlciIsInNpdGVJZCI6IjcwOGJjODk4MDAwMDAwMDAwMDAwMDAwMCIsIm5vZGVJZCI6ImFjb1ltZjQiLCJpYXQiOjE3NjQ4NTQ4MzIsImV4cCI6MTc2NTE1NDgzMiwiaXNzIjoiNzA4YmM4OTgwMDAwMDAwMDAwMDAwMDAwIn0.lAGXGC312Xsb5B8DHOMhq4QXOel_FoHcJhrEQ5okWIs
+}
+
+body:json {
+  {
+      "version": "1.0.0-sk_pa_raspbian_v2"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

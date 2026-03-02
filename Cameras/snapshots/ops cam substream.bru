@@ -1,0 +1,19 @@
+meta {
+  name: ops cam substream
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://100.93.249.117:1984/api/frame.jpeg?src=test
+  body: none
+  auth: inherit
+}
+
+params:query {
+  src: test
+}
+
+settings {
+  encodeUrl: true
+}

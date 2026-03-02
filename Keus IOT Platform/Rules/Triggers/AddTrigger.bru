@@ -1,0 +1,30 @@
+meta {
+  name: AddTrigger
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/1.0.0.kiotp.plugins.general.rulesengine/AddTrigger
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "ruleId" : "658a76c23ebbd21017fb079e",
+      "triggerSetId": "658ae98a24f545e713df6c24",
+      "trigger": {
+                          "operation": "",
+                          "name": "bright scene",
+                          "eventId": "hello-2",
+                          "type": "scene",
+                          "data": 0,
+                          "key": ""
+                      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

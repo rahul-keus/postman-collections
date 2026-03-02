@@ -1,0 +1,15 @@
+meta {
+  name: Get all internal users
+  type: http
+  seq: 8
+}
+
+get {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/v1/auth_service/GetAllInternalUsers
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

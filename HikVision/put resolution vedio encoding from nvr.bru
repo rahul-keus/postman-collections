@@ -1,0 +1,42 @@
+meta {
+  name: put resolution vedio encoding from nvr
+  type: http
+  seq: 11
+}
+
+get {
+  url: http://10.1.4.52/ISAPI/ContentMgmt/StreamingProxy/channels/501
+  body: xml
+  auth: inherit
+}
+
+body:xml {
+  <?xml version="1.0" encoding="UTF-8" ?>
+  <StreamingChannel version="2.0" xmlns="http://www.isapi.org/ver20/XMLSchema">
+      <id>301</id>
+      <channelName>301</channelName>
+      <enabled>true</enabled>
+      <Transport>
+          <ControlProtocolList>
+              <ControlProtocol>
+                  <streamingTransport>RTSP</streamingTransport>
+              </ControlProtocol>
+          </ControlProtocolList>
+      </Transport>
+      <Video>
+          <enabled>true</enabled>
+          <dynVideoInputChannelID>3</dynVideoInputChannelID>
+          <videoCodecType>H.264</videoCodecType>
+          <videoScanType>progressive</videoScanType>
+          <videoResolutionWidth>1280</videoResolutionWidth>
+          <videoResolutionHeight>720</videoResolutionHeight>
+          <videoQualityControlType>VBR</videoQualityControlType>
+          <fixedQuality>60</fixedQuality>
+          <maxFrameRate>0</maxFrameRate>
+      </Video>
+  </StreamingChannel>
+}
+
+settings {
+  encodeUrl: true
+}

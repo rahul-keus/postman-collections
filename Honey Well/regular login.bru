@@ -1,0 +1,33 @@
+meta {
+  name: regular login
+  type: http
+  seq: 4
+}
+
+post {
+  url: https://10.1.4.111/API/Web/Login
+  body: json
+  auth: digest
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:digest {
+  username: admin
+  password: admin
+}
+
+body:json {
+  {
+      "version": "1.0",
+      "data": {
+          "oem_type": 114
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

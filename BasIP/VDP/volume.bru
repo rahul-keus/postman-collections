@@ -1,0 +1,22 @@
+meta {
+  name: volume
+  type: http
+  seq: 13
+}
+
+post {
+  url: http://10.1.4.131/api/v1/device/settings/volume
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "volume_level": 6,
+      "mic_gain_level": 6
+  }
+}
+
+settings {
+  encodeUrl: true
+}

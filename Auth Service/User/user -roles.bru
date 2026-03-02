@@ -1,0 +1,25 @@
+meta {
+  name: /user /roles
+  type: http
+  seq: 6
+}
+
+get {
+  url: http://keus-public-lb1-813589603.ap-south-1.elb.amazonaws.com:3002/api/user/65b91166f75b31fe4475257f-8702ccb916b8450e8813fd459db77068/roles
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: 123456
+}
+
+body:json {
+  {
+      "role": "65b91166f75b31fe4475257f-e31a946deed041d798e2bfda5d792981"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

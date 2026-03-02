@@ -1,0 +1,24 @@
+meta {
+  name: mergeConfig Testing
+  type: http
+  seq: 2
+}
+
+patch {
+  url: http://localhost:1984/api/config
+  body: text
+  auth: inherit
+}
+
+body:text {
+  streams:
+      testing:  rtsp://testing
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Note: Use **addStream** instead of this for default cases where only src & name is needed
+}

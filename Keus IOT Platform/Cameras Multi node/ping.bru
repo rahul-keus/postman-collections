@@ -1,0 +1,15 @@
+meta {
+  name: ping
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://100.119.123.42:7845/ping
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

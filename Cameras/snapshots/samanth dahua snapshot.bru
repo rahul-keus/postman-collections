@@ -1,0 +1,25 @@
+meta {
+  name: samanth dahua snapshot
+  type: http
+  seq: 6
+}
+
+get {
+  url: http://192.168.4.41/cgi-bin/snapshot.cgi?channel=1&subtype=0
+  body: none
+  auth: digest
+}
+
+params:query {
+  channel: 1
+  subtype: 0
+}
+
+auth:digest {
+  username: admin
+  password: Mandevilla@09
+}
+
+settings {
+  encodeUrl: true
+}

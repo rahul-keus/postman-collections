@@ -1,0 +1,15 @@
+meta {
+  name: discover cameras
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://10.1.4.111/API/SystemInfo/Channel/Get
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

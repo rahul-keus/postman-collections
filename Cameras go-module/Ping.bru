@@ -1,0 +1,22 @@
+meta {
+  name: Ping
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{BaseUrl}}/ping
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "a": 2,
+      "b": 3
+  }
+}
+
+settings {
+  encodeUrl: true
+}

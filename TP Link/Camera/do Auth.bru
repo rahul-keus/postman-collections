@@ -1,0 +1,22 @@
+meta {
+  name: do Auth
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://10.1.4.38:20443
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "method": "doAuth",
+      "params": null 
+  }
+}
+
+settings {
+  encodeUrl: true
+}

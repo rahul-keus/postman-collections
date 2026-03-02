@@ -1,0 +1,21 @@
+meta {
+  name: Delete user
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{BASE_URL}}/v1/user/delete_user
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "userId": "+917569929617_development"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,22 @@
+meta {
+  name: updateNvr
+  type: http
+  seq: 3
+}
+
+patch {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/{{CameraVersion}}/{{CameraId}}/updateNvr
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "nvrId": "69413aa342a52184c97b2f92",
+      "nvrIp": "10.1.4.145"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

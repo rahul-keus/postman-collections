@@ -1,0 +1,26 @@
+meta {
+  name: get inter plugin installer script Copy
+  type: http
+  seq: 8
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/api/v1/plugins_store/get_inter_plugin_installer_script
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "nodeId": "yash-keus",
+      "pluginNodeId": "yash-keus",
+      "namespace": "test1234",
+      "localPluginPath": "localPath/uu",
+      "version": "1.0.0",
+      "isProduction": true
+  }
+}
+
+settings {
+  encodeUrl: true
+}

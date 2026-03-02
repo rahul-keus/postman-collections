@@ -1,0 +1,25 @@
+meta {
+  name: Update role
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{BASE_URL}}/v1/role/update_role
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "role": {
+          "id":"35d917a60000000000000000",
+          // "permissions": ["site:update", "site:view"]
+          "permissions": ["site:view"]
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

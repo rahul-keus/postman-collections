@@ -1,0 +1,33 @@
+meta {
+  name: Create user (gateway)
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{BASE_URL}}/v1/multiflow/gateway.create_multiflow_user
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: ATmNrWLByzAb9ZPO4z7uiJGnaaYZKWwFL9qze2pyaTAesz-pmRkk2kE-01E2POUROR5bo-J2D3tJyg
+}
+
+body:json {
+  {
+      "user" : {
+          "id" : "test-user-fb-4",
+          "name": "test-user-fb",
+          "customProperties" : {
+              "key1": "v1",
+              "key2": "v2"
+          }
+      },
+      "projectKey" : "testing"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

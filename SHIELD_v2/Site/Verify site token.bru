@@ -1,0 +1,24 @@
+meta {
+  name: Verify site token
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{BASE_URL}}/v1/site/verify_site_token
+  body: none
+  auth: bearer
+}
+
+headers {
+  x-site-id: 763a38750000000000000000
+  x-node-id: test
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlSWQiOiI3NjNhMzg3NTAwMDAwMDAwMDAwMDAwMDAiLCJub2RlSWQiOiJlWEljRklLIiwiaWF0IjoxNzU0MzkxNDY4LCJleHAiOjE3NTQzOTE0OTgsImlzcyI6ImVYSWNGSUsifQ.1jJ3Dl5L6PNrJxFiBEKXMKX4L0QeeFSh8qs-woMCS2Y
+}
+
+settings {
+  encodeUrl: true
+}

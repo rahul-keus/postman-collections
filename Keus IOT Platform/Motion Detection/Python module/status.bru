@@ -1,0 +1,15 @@
+meta {
+  name: status
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://{{NodeHost}}:8083/status
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

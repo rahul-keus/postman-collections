@@ -1,0 +1,27 @@
+meta {
+  name: get default variation
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://shield.keus.in/api/multiflow/get_default_variation
+  body: json
+  auth: inherit
+}
+
+headers {
+  token: oGsLOsH6ede8ixiSfuHMrd61eRBrn9fn5thJa4MA
+}
+
+body:json {
+  {
+      "featureId": "platform-agent",
+      "projectName": "platform"
+      // "projectEnvironment": "Prod"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

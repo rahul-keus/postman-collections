@@ -1,0 +1,15 @@
+meta {
+  name: system info
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://10.1.4.230/api/system/info
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

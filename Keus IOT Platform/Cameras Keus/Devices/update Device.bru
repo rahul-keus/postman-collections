@@ -1,0 +1,22 @@
+meta {
+  name: update Device
+  type: http
+  seq: 3
+}
+
+patch {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/1.0.0/kiotp.plugins.cameras.core/updateDevice
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "deviceId": "I20230213AAWRL28326184",
+      "deviceName": "Living Room"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

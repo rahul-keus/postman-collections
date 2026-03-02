@@ -1,0 +1,25 @@
+meta {
+  name: Get all Backups
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{BASE_URL}}/v1/site_backup/list_backups
+  body: json
+  auth: inherit
+}
+
+headers {
+  ~x-session-id: 349410806783279113
+}
+
+body:json {
+  {
+      "siteId": "81bfc5320000000000000000"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

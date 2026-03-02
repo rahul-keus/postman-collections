@@ -1,0 +1,25 @@
+meta {
+  name: set Encode
+  type: http
+  seq: 28
+}
+
+get {
+  url: http://10.1.4.156/cgi-bin/configManager.cgi?action=setConfig&Encode[0].MainFormat[0].Video.Compression=H.264
+  body: none
+  auth: digest
+}
+
+params:query {
+  action: setConfig
+  Encode[0].MainFormat[0].Video.Compression: H.264
+}
+
+auth:digest {
+  username: admin
+  password: admin@123
+}
+
+settings {
+  encodeUrl: true
+}

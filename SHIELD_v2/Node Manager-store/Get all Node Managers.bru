@@ -1,0 +1,21 @@
+meta {
+  name: Get all Node Managers
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{BASE_URL}}/v1/node_manager_store/get_all_node_managers
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+  
+  }
+}
+
+settings {
+  encodeUrl: true
+}

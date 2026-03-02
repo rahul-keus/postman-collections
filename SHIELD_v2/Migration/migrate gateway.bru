@@ -1,0 +1,44 @@
+meta {
+  name: migrate gateway
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{BASE_URL}}/v1/migration_service/migrate_and_sync_v1_gateway
+  body: json
+  auth: bearer
+}
+
+headers {
+  x-session-id: 361876799103172617
+}
+
+auth:bearer {
+  token: rc8TCZXBgHfw2klaXqBjZeJ_7cHnzYpm6FM1DzdSRoWSxBFwgQvoYy2qPINNF7X6XG8FEn7JsVrqVw
+}
+
+body:json {
+  // {
+  //     // "gatewayId": "Keus-9e3ebade-37c1-4c44-95b8-219db44aaf16" // sk hub
+  //     "gatewayId": "Keus-b535bad3-94a1-4a95-926b-2d619d246651" // stage
+  //     // "gatewayId": "Keus-dd535a41-a100-4620-aac2-2915574c8243"
+  //     // "gatewayId": "Keus-9ae6811c-1ae9-4c74-8878-d8986573822d" // demo rack
+  //     // "gatewayId": "Keus-3cbaa721-6845-4116-bb8a-d59ae7fbbcfd"
+  // }
+  
+  {
+      "clearCache" : true,
+      "gatewayIds": [
+          "Keus-9ae6811c-1ae9-4c74-8878-d8986573822d"  // demo rack
+          // "Keus-9e3ebade-37c1-4c44-95b8-219db44aaf16",   // sk hub
+          // "Keus-b535bad3-94a1-4a95-926b-2d619d246651", // stage
+          // "Keus-6f3e9155-512e-4ff4-890c-a557e254773a", // QA
+          // "Keus-199786d6-cf1f-47a7-87d9-af7f2a3ab9b0" // dallas office
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,22 @@
+meta {
+  name: update
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://keus-public-lb1-813589603.ap-south-1.elb.amazonaws.com:3002/api/account/65cdade3a54e05faf829cafd
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "name": "APP5",
+      "type": "admin5"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

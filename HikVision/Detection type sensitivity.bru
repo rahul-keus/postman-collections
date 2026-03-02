@@ -1,0 +1,19 @@
+meta {
+  name: Detection type sensitivity
+  type: http
+  seq: 15
+}
+
+get {
+  url: http://10.1.4.52/ISAPI/Image/channels/301/EPTZ/mode?format=json
+  body: none
+  auth: inherit
+}
+
+params:query {
+  format: json
+}
+
+settings {
+  encodeUrl: true
+}

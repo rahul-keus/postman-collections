@@ -1,0 +1,15 @@
+meta {
+  name: Get all users
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{BASE_URL}}/v1/end_user/get_all_users
+  body: text
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,35 @@
+meta {
+  name: deleteCamera
+  type: http
+  seq: 7
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/1.0.0/kiotp.plugins.core.cameras.keus/deleteCamera
+  body: json
+  auth: inherit
+}
+
+body:json {
+  // NVR
+  // {
+  //    "deviceIp": "10.1.8.100",
+  //    "deviceType": "nvr"
+  // }
+  
+  // Camera
+  // {
+  //    "deviceId": "9A01072PAJB3E1F",
+  //    "deviceType": "camera"
+  // }
+  
+  // VDP
+  {
+     "deviceId": "9A01072PAJB3E1F",
+     "deviceType": "vdp"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

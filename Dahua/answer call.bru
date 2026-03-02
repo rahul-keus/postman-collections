@@ -1,0 +1,31 @@
+meta {
+  name: answer call
+  type: http
+  seq: 23
+}
+
+get {
+  url: '''
+    http://10.1.4.4/cgi-bin/VideoTalkPeer.cgi?action=answer&Talkback.Protocol=UDP&Talkback.Type
+     =Talk&Talkback.MediaAddr=224.10.10.10
+'''
+  body: none
+  auth: digest
+}
+
+params:query {
+  action: answer
+  Talkback.Protocol: UDP
+  "Talkback.Type
+   ": Talk
+  Talkback.MediaAddr: 224.10.10.10
+}
+
+auth:digest {
+  username: admin
+  password: admin@123
+}
+
+settings {
+  encodeUrl: true
+}

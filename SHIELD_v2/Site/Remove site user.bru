@@ -1,0 +1,33 @@
+meta {
+  name: Remove site user
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{BASE_URL}}/v1/site/enduser.remove_site_user
+  body: json
+  auth: bearer
+}
+
+headers {
+  x-session-id: 349410806783279113
+}
+
+auth:bearer {
+  token: mdHkgrMH4FAbhr6tP451nFaAaI-_wUO-18lRujnl5_iPeD2UDntZFcZkeAYnX0Fj9NhGog2ViAR6Bw
+}
+
+body:json {
+  {
+      "user":{
+          "phone" : "+919876543210"
+      },
+      "siteId" : "2eb50de90000000000000000",
+      "siteJWT": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImUzZjRlOTMyMDAwMDAwMDAwMDAwMDAwMCIsInVzZXJJZCI6Iis5MTk4NzY1NDMyMTAiLCJ1c2VyTmFtZSI6bnVsbCwiZGV2aWNlIjp7fSwiaWF0IjoxNzY0NzYyNzU5LCJleHAiOjE3NzI1Mzg3NTksImlzcyI6IjJlYjUwZGU5MDAwMDAwMDAwMDAwMDAwMCJ9.BwI2CkdT5YkgGlNYcdyEgenkGcAyLBnbN9UhgfgLQv4"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

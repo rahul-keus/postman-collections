@@ -1,0 +1,27 @@
+meta {
+  name: mergeConfig
+  type: http
+  seq: 1
+}
+
+patch {
+  url: http://10.1.4.107:1984/api/config
+  body: text
+  auth: inherit
+}
+
+body:text {
+  streams:
+      testing: |
+          expr: let host = "admin:admin@123@10.1.4.4";
+          fetch("https://"+host+"/cgi-bin/configManager.cgi?action=setConfig&Encode[0].MainFormat[0].Audio.Compression=G.711A&Encode[0].MainFormat[0].Audio.Frequency=8000").ok
+              ? "rtsp://"+host+"/cam/realmonitor?channel=1&subtype=0&unicast=true&proto=Onvif" : ""
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Note: Use **addStream** instead of this for default cases where only src & name is needed
+}

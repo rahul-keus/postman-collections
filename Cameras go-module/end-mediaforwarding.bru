@@ -1,0 +1,21 @@
+meta {
+  name: end-mediaforwarding
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{BaseUrl}}/end-media-forwarding
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "sessionId": "0d2480a1a4e94165"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

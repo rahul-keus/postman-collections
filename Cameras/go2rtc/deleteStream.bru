@@ -1,0 +1,19 @@
+meta {
+  name: deleteStream
+  type: http
+  seq: 10
+}
+
+delete {
+  url: http://10.1.4.107:1984/api/streams?src=stream
+  body: none
+  auth: inherit
+}
+
+params:query {
+  src: stream
+}
+
+settings {
+  encodeUrl: true
+}

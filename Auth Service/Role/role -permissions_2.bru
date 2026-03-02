@@ -1,0 +1,25 @@
+meta {
+  name: /role /permissions_2
+  type: http
+  seq: 7
+}
+
+delete {
+  url: http://keus-public-lb1-813589603.ap-south-1.elb.amazonaws.com:3002/api/role/65b91160f75b31fe4475257d-432e26d6011e439a9d707c90d5bf3c6b/permissions
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: 123456
+}
+
+body:json {
+  {
+      "permission": "65b91120f75b31fe44752573"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

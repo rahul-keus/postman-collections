@@ -1,0 +1,205 @@
+meta {
+  name: Discover Cameras
+  type: http
+  seq: 6
+}
+
+get {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/{{CameraVersion}}/{{CameraId}}/discoverCameras
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Discover Cameras
+  
+  request: {
+    url: http://{{NodeHost}}:{{NodePort}}/keus/{{CameraVersion}}/{{CameraId}}/discoverCameras
+    method: GET
+    mode: none
+  }
+  
+  response: {
+    headers: {
+      X-Request-ID: 08431a6a-b83e-4f56-a993-a4e9994836f2
+      Content-Type: application/json; charset=utf-8
+      Date: Thu, 27 Nov 2025 13:46:14 GMT
+      Connection: keep-alive
+      Keep-Alive: timeout=5
+      Content-Length: 4630
+    }
+  
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "success": true,
+            "data": [
+                {
+                    "deviceId": "6K042F7PAG2C5B5",
+                    "deviceIp": "10.1.4.156",
+                    "deviceName": "D-old",
+                    "deviceType": "camera",
+                    "macAddress": "",
+                    "deviceVersion": "1.0.0",
+                    "thumbnailUrl": "https://heimdall.keus.in/Keus-199786d6-cf1f-47a7-87d9-af7f2a3ab9b0-kiotp.plugins.cameras.core/snapshot/6K042F7PAG2C5B5",
+                    "deviceModel": "dahua",
+                    "messageSupported": false,
+                    "isLiveStreamingSupported": true,
+                    "isTalkBackSupported": false,
+                    "isMotionEventsSupported": true,
+                    "isRingEventsSupported": false,
+                    "isPlayBackSupported": true,
+                    "isAudioSupported": false
+                },
+                {
+                    "deviceId": "AC05FC0PCA990BE",
+                    "deviceIp": "10.1.4.5",
+                    "deviceName": "dahua-new",
+                    "deviceType": "camera",
+                    "macAddress": "",
+                    "deviceVersion": "1.0.0",
+                    "thumbnailUrl": "https://heimdall.keus.in/Keus-199786d6-cf1f-47a7-87d9-af7f2a3ab9b0-kiotp.plugins.cameras.core/snapshot/AC05FC0PCA990BE",
+                    "deviceModel": "dahua",
+                    "messageSupported": false,
+                    "isLiveStreamingSupported": true,
+                    "isTalkBackSupported": false,
+                    "isMotionEventsSupported": true,
+                    "isRingEventsSupported": false,
+                    "isPlayBackSupported": true,
+                    "isAudioSupported": true
+                },
+                {
+                    "deviceId": "I20230213AAWRL28326184",
+                    "deviceIp": "10.1.4.53",
+                    "deviceName": "WORK STATION 1",
+                    "deviceType": "camera",
+                    "macAddress": "",
+                    "deviceVersion": "1.0.0",
+                    "thumbnailUrl": "https://heimdall.keus.in/Keus-199786d6-cf1f-47a7-87d9-af7f2a3ab9b0-kiotp.plugins.cameras.core/snapshot/I20230213AAWRL28326184",
+                    "deviceModel": "hikvision",
+                    "messageSupported": false,
+                    "isLiveStreamingSupported": true,
+                    "isTalkBackSupported": false,
+                    "isMotionEventsSupported": true,
+                    "isRingEventsSupported": false,
+                    "isPlayBackSupported": true,
+                    "isAudioSupported": true
+                },
+                {
+                    "deviceId": "I20230213AAWRL28326174",
+                    "deviceIp": "10.1.4.55",
+                    "deviceName": "CAFETERIA",
+                    "deviceType": "camera",
+                    "macAddress": "",
+                    "deviceVersion": "1.0.0",
+                    "thumbnailUrl": "https://heimdall.keus.in/Keus-199786d6-cf1f-47a7-87d9-af7f2a3ab9b0-kiotp.plugins.cameras.core/snapshot/I20230213AAWRL28326174",
+                    "deviceModel": "hikvision",
+                    "messageSupported": false,
+                    "isLiveStreamingSupported": true,
+                    "isTalkBackSupported": false,
+                    "isMotionEventsSupported": true,
+                    "isRingEventsSupported": false,
+                    "isPlayBackSupported": true,
+                    "isAudioSupported": true
+                },
+                {
+                    "deviceId": "I20230429AAWRL51779612",
+                    "deviceIp": "10.1.4.56",
+                    "deviceName": "WORK STATION 2",
+                    "deviceType": "camera",
+                    "macAddress": "",
+                    "deviceVersion": "1.0.0",
+                    "thumbnailUrl": "https://heimdall.keus.in/Keus-199786d6-cf1f-47a7-87d9-af7f2a3ab9b0-kiotp.plugins.cameras.core/snapshot/I20230429AAWRL51779612",
+                    "deviceModel": "hikvision",
+                    "messageSupported": false,
+                    "isLiveStreamingSupported": true,
+                    "isTalkBackSupported": false,
+                    "isMotionEventsSupported": true,
+                    "isRingEventsSupported": false,
+                    "isPlayBackSupported": true,
+                    "isAudioSupported": true
+                },
+                {
+                    "deviceId": "I20230201AAWRL23999652",
+                    "deviceIp": "10.1.4.54",
+                    "deviceName": "HARDWARE ROOM",
+                    "deviceType": "camera",
+                    "macAddress": "",
+                    "deviceVersion": "1.0.0",
+                    "thumbnailUrl": "https://heimdall.keus.in/Keus-199786d6-cf1f-47a7-87d9-af7f2a3ab9b0-kiotp.plugins.cameras.core/snapshot/I20230201AAWRL23999652",
+                    "deviceModel": "hikvision",
+                    "messageSupported": false,
+                    "isLiveStreamingSupported": true,
+                    "isTalkBackSupported": false,
+                    "isMotionEventsSupported": true,
+                    "isRingEventsSupported": false,
+                    "isPlayBackSupported": true,
+                    "isAudioSupported": true
+                },
+                {
+                    "deviceId": "LIU20240318AAWRFB4980056",
+                    "deviceIp": "10.1.4.57",
+                    "deviceName": "HIKVISION NEW",
+                    "deviceType": "camera",
+                    "macAddress": "",
+                    "deviceVersion": "1.0.0",
+                    "thumbnailUrl": "https://heimdall.keus.in/Keus-199786d6-cf1f-47a7-87d9-af7f2a3ab9b0-kiotp.plugins.cameras.core/snapshot/LIU20240318AAWRFB4980056",
+                    "deviceModel": "hikvision",
+                    "messageSupported": false,
+                    "isLiveStreamingSupported": true,
+                    "isTalkBackSupported": false,
+                    "isMotionEventsSupported": true,
+                    "isRingEventsSupported": false,
+                    "isPlayBackSupported": true,
+                    "isAudioSupported": true
+                },
+                {
+                    "deviceId": "672dc2b60006a603e400121d",
+                    "deviceIp": "10.1.4.28",
+                    "deviceName": "Testing Room",
+                    "deviceType": "camera",
+                    "macAddress": "",
+                    "deviceVersion": "1.0.0",
+                    "thumbnailUrl": "https://heimdall.keus.in/Keus-199786d6-cf1f-47a7-87d9-af7f2a3ab9b0-kiotp.plugins.cameras.core/snapshot/672dc2b60006a603e400121d",
+                    "deviceModel": "unifi",
+                    "messageSupported": false,
+                    "isLiveStreamingSupported": true,
+                    "isTalkBackSupported": true,
+                    "isMotionEventsSupported": true,
+                    "isRingEventsSupported": false,
+                    "isPlayBackSupported": true,
+                    "isAudioSupported": true
+                },
+                {
+                    "deviceId": "6697bde601493403e4000460",
+                    "deviceIp": "10.1.4.17",
+                    "deviceName": "Unifi VDP",
+                    "deviceType": "vdp",
+                    "macAddress": "",
+                    "deviceVersion": "1.0.0",
+                    "thumbnailUrl": "https://heimdall.keus.in/Keus-199786d6-cf1f-47a7-87d9-af7f2a3ab9b0-kiotp.plugins.cameras.core/snapshot/6697bde601493403e4000460",
+                    "deviceModel": "unifi",
+                    "messageSupported": true,
+                    "isLiveStreamingSupported": true,
+                    "isTalkBackSupported": true,
+                    "isMotionEventsSupported": true,
+                    "isRingEventsSupported": true,
+                    "isPlayBackSupported": true,
+                    "isAudioSupported": true
+                }
+            ]
+        }
+      '''
+    }
+  }
+}

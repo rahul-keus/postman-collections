@@ -1,0 +1,23 @@
+meta {
+  name: get NVR Info
+  type: http
+  seq: 4
+}
+
+get {
+  url: https://{{nvrIp}}:{{port}}/openapi/
+  body: none
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyAidXNyIjogImFkbWluIiwgImdycCI6ICJyb290IiwgImV4cCI6ICIyMDI1LTA5LTIzIDA1OjAxOjAwIiB9.C3VNV79/znq6Aq0tmcOj26FI0NykYRICKDgpkk8pxEi6EKlwtAxJjVi0tq+Owu+XQrtS8OeM7A0rJm0AUkdYA8D745EpTwXOzgF8Ws4DDmEoPUVJrqureIWPjUK1jaWv3i84YON4kaX3MhjPgfYU9U+Bi6NdSD4mm3T7ENdBBXs=
+}
+
+settings {
+  encodeUrl: true
+}

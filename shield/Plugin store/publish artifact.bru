@@ -1,0 +1,23 @@
+meta {
+  name: publish artifact
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/api/v1/plugins_store/publish_artifact
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+     "localPluginPath": "/keus-iot-platform/packages/plugins-default/plugin-cameras-core",
+     "branch": "platform_pm2_setup",
+     "containerImageBuild": true
+  }
+}
+
+settings {
+  encodeUrl: true
+}

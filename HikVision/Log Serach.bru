@@ -1,0 +1,33 @@
+meta {
+  name: Log Serach
+  type: http
+  seq: 12
+}
+
+post {
+  url: http://10.1.4.52/ISAPI/ContentMgmt/search
+  body: xml
+  auth: inherit
+}
+
+body:xml {
+  <?xml version="1.0" encoding="utf-8"?>
+  <CMSearchDescription>
+      <searchID>00000000-0000-0000-0000-000000000103</searchID>
+      <trackList>
+          <trackID>303</trackID>
+      </trackList>
+      <timeSpanList>
+          <timeSpan>
+              <startTime>2026-02-10T08:00:00Z</startTime>
+              <endTime>2026-02-11T22:59:59Z</endTime>
+          </timeSpan>
+      </timeSpanList>
+      <maxResults>50</maxResults>
+      <searchResultPostion>0</searchResultPostion>
+  </CMSearchDescription>
+}
+
+settings {
+  encodeUrl: true
+}

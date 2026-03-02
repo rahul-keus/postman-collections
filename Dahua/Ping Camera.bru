@@ -1,0 +1,28 @@
+meta {
+  name: Ping Camera
+  type: http
+  seq: 24
+}
+
+post {
+  url: http://192.168.1.110/cgi-bin/api/LogicDeviceManager/getCameraState
+  body: json
+  auth: digest
+}
+
+auth:digest {
+  username: admin
+  password: admin@123
+}
+
+body:json {
+  {
+      "uniqueChannels": [
+          0
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

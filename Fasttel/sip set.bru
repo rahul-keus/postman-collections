@@ -1,0 +1,25 @@
+meta {
+  name: sip set
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://10.1.4.89/api/sip/set
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "target": "sip",
+      "action": "set",
+      "data": {
+          "Config.Account2.GENERAL.DisplayName": "keus-user"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,27 @@
+meta {
+  name: http://admin:admin@123@10.1.4.2/cgi-bin/audio.cgi?action=postAudio&httptype=singlepart&channel=1
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://admin:admin@123@10.1.4.6/cgi-bin/audio.cgi?action=postAudio&httptype=singlepart&channel=1
+  body: none
+  auth: inherit
+}
+
+params:query {
+  action: postAudio
+  httptype: singlepart
+  channel: 1
+}
+
+headers {
+  Content-Type: Audio/G.711A
+  User-Agent: client/1.0
+  ~Content-Length: 999999
+}
+
+settings {
+  encodeUrl: true
+}

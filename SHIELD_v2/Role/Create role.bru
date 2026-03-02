@@ -1,0 +1,25 @@
+meta {
+  name: Create role
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{BASE_URL}}/v1/role/create_role
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "role": {
+          "name": "admin",
+          "description": "admin of shield",
+          "permissions" : []
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

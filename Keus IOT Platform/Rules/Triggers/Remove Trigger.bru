@@ -1,0 +1,23 @@
+meta {
+  name: Remove Trigger
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/1.0.0.kiotp.plugins.general.rulesengine/RemoveTrigger
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "ruleId": "658a76c23ebbd21017fb079e",
+      "triggerSetId": "658ac0db2520e7a01d15c026",
+      "triggerId": "658ac0fd2520e7a01d15c027"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

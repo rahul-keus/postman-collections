@@ -1,0 +1,54 @@
+meta {
+  name: RegisterNode
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/v1/node_registration/RegisterNode
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      // "siteId": "75e6482c0000000000000000",  // sk site
+      "siteId": "81bfc5320000000000000000", // rahul-site
+      // "siteId": "2ec8a4db0000000000000000", 
+      // "siteId": "Keus-9ae6811c-1ae9-4c74-8878-d8986573822d",
+      // "siteId": "2eb50de90000000000000000", // dev-test-site
+      // "siteId": "11a9cc120000000000000000", // prod-test-site-dallas
+      // "siteId": "2756357a0000000000000000", // dummy-for local
+      // "isWorker": true,  // if the node is worker.
+      "nodeInfo": {
+          // "managerIp": "10.1.4.73", // if the node is worker.
+          // "managerIp": "192.168.0.130", // if the node is worker.
+          "autoDiscoveryOfBrokerIp": false
+      },
+      // "environment": "Development", // Not required 
+      // "secretKey":"2Y7UAzsbQInZcnwxM-eYvefPSoGFmdrsM8fIEwnXs-wkobEazzYnXmzWgQhrc_A1r3q9lDc", // sk-site
+      // "secretKey":"3riJsG1HrZScTo67p4yxk8vmbs7bE-IxaT9KDZg0YOthm-oZZqEbORjsVkZMoGIBmqz07jc", // dev-test-site
+      // "secretKey":"GVBx-BrIgnVRF86fO83VH4r5ILyV1BlHLk8oq94lcvwnhK-K4kz50K6xgh2lePWVHivCWqQ", // 2ec8a4db0000000000000000
+      "secretKey":"edLFELvsEuPL4OOsRg92VBjdgahh2lDli4-IQlrkbv38CayQoNTculVAcHiKJ4uZYQ0U5dE", // rahul-site
+      // "secretKey":"eoG1vdeTVjHfJjQyy3DcQv8gM6xfQwClYnpAgPT9VImy0kduuqkFy-ZR6s6Vuj9sGqfmWew", // prod-test-site-dallas
+      // "secretKey":"5lVejnjOJ3zFTyWmBCYNTAPT2yxnK8nVU21DeSIvcq8XhWFRQuFIYLzTRwEhk2oh2IAmhgY", // dummy-for local
+      "serviceUsers": [
+          {
+              "id": "service_user",
+              "token": "7fc86bc34be7f882627420b9b5ed154dc63d427b9e7bf0a4bdb8b62fd155f5db"
+          },
+          {
+              "id": "demo_user",
+              "token": "d1131cce0fd7fa0279798a569b61e8d9f8edb2295ca7086b621d15d121d0576b"
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Use this for registering a fresh node.
+}

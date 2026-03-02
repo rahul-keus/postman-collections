@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Honey Well",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

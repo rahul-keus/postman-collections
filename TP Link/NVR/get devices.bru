@@ -1,0 +1,23 @@
+meta {
+  name: get devices
+  type: http
+  seq: 3
+}
+
+get {
+  url: https://{{nvrIp}}:{{port}}/openapi/added_devices
+  body: none
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyAidXNyIjogImFkbWluIiwgImdycCI6ICJyb290IiwgImV4cCI6ICIyMDI1LTA5LTIyIDE0OjA0OjEwIiB9.PdICJe7ouj5mBTXJoqpNxX3prNdtCcwGI5/uPekazLVSftmb3txh6I66zha9SEa7mIa274IeCEzJRIxU68w75eYuRcwVMXbK6Q10IyWkQ2TeTRQrt1AzFqU0gMTOlM6dWj3M0lFIHJG/2iuqY3uuBQ4AJzK+S/cXOdhWKcYmdY4=
+}
+
+settings {
+  encodeUrl: true
+}

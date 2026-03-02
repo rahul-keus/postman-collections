@@ -1,0 +1,22 @@
+meta {
+  name: addName
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/1.0.0/kiotp.plugins.core.cameras.keus/addName
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+     "deviceId": "8E0C35EPAJ2F9F3",
+     "deviceName": "Dining"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

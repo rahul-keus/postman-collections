@@ -1,0 +1,23 @@
+meta {
+  name: update user
+  type: http
+  seq: 7
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/1.0.0/kiotp.plugins.core.helloworld/updateUser
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "userId": "12345",
+      "userName": "Rahul Varma",
+      "password": "varma"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

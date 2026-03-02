@@ -1,0 +1,25 @@
+meta {
+  name: get all config
+  type: http
+  seq: 29
+}
+
+get {
+  url: http://10.1.4.156/cgi-bin/configManager.cgi?action=getConfig&name=All
+  body: none
+  auth: digest
+}
+
+params:query {
+  action: getConfig
+  name: All
+}
+
+auth:digest {
+  username: admin
+  password: admin@123
+}
+
+settings {
+  encodeUrl: true
+}

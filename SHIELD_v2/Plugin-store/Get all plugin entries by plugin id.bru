@@ -1,0 +1,23 @@
+meta {
+  name: Get all plugin entries by plugin id
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{BASE_URL}}/v1/plugin_store/get_all_plugin_entries_by_id
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "pluginId" : "kiotp.plugins.default.helloworld-inter"
+      // "pluginId" : "kiotp.plugins.default.helloworld"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,15 @@
+meta {
+  name: Trigger backup
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://{{host}}:{{port}}/api/v1/agent/perform_backup
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

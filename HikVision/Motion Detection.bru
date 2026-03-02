@@ -1,0 +1,15 @@
+meta {
+  name: Motion Detection
+  type: http
+  seq: 24
+}
+
+get {
+  url: http://10.1.4.56/ISAPI/Event/notification/alertStream
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

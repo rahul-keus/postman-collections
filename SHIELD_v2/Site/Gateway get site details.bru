@@ -1,0 +1,26 @@
+meta {
+  name: Gateway get site details
+  type: http
+  seq: 11
+}
+
+post {
+  url: {{BASE_URL}}/v1/site/migration.get_site_details
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: 00z-XWjzVLrk2_5eR71PYp9ecj81d8mvsrLrUNe8l0fhjPptZXipGQWsDEifnjO6857Lifg
+}
+
+body:json {
+  {
+      "includeFullDetails": true,
+      "siteId": "Keus-9e3ebade-37c1-4c44-95b8-219db44aaf16"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

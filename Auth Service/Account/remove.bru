@@ -1,0 +1,15 @@
+meta {
+  name: remove
+  type: http
+  seq: 4
+}
+
+delete {
+  url: http://keus-public-lb1-813589603.ap-south-1.elb.amazonaws.com:3002/api/account/65cdade3a54e05faf829cafd
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,38 @@
+meta {
+  name: Record Never
+  type: http
+  seq: 20
+}
+
+get {
+  url: http://10.1.4.124/cgi-bin/configManager.cgi?action=setConfig&Record[0].TimeSection[0][0]=0 00:00:00-23:59:59&Record[0].TimeSection[1][0]=0 00:00:00-23:59:59&Record[0].TimeSection[2][0]=0 00:00:00-23:59:59&Record[0].TimeSection[3][0]=0 00:00:00-23:59:59&Record[0].TimeSection[4][0]=0 00:00:00-23:59:59&Record[0].TimeSection[5][0]=0 00:00:00-23:59:59&Record[0].TimeSection[6][0]=0
+  body: json
+  auth: digest
+}
+
+params:query {
+  action: setConfig
+  Record[0].TimeSection[0][0]: 0 00:00:00-23:59:59
+  Record[0].TimeSection[1][0]: 0 00:00:00-23:59:59
+  Record[0].TimeSection[2][0]: 0 00:00:00-23:59:59
+  Record[0].TimeSection[3][0]: 0 00:00:00-23:59:59
+  Record[0].TimeSection[4][0]: 0 00:00:00-23:59:59
+  Record[0].TimeSection[5][0]: 0 00:00:00-23:59:59
+  Record[0].TimeSection[6][0]: 0
+}
+
+headers {
+  Cookie: WebClientHttpSessionID=39aa11c2e781da9772a2b8733ec039c8
+  ~Content-Type: Audio/G.711A
+  ~Content-Length: 999999
+  ~User-Agent: client/1.0
+}
+
+auth:digest {
+  username: admin
+  password: admin@123
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,30 @@
+meta {
+  name: put resolution vedio encoding from camera
+  type: http
+  seq: 10
+}
+
+put {
+  url: http://10.1.4.56/ISAPI/Streaming/channels/101
+  body: xml
+  auth: inherit
+}
+
+body:xml {
+  <?xml version="1.0" encoding="UTF-8"?>
+  <StreamingChannel version="2.0" xmlns="http://www.hikvision.com/ver20/XMLSchema">
+      <id>101</id>
+      <Video>
+          <videoCodecType>H.264</videoCodecType>
+          <videoResolutionWidth>1280</videoResolutionWidth>
+          <videoResolutionHeight>720</videoResolutionHeight>
+          <videoQualityControlType>VBR</videoQualityControlType>
+          <constantBitRate>2048</constantBitRate>
+          <maxFrameRate>2500</maxFrameRate>
+      </Video>
+  </StreamingChannel>
+}
+
+settings {
+  encodeUrl: true
+}

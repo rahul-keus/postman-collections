@@ -1,0 +1,25 @@
+meta {
+  name: Get IR Remotes list
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{BASE_URL}}/v1/home_automation/get_remote_list
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJkZW1vX3VzZXIiLCJ1c2VyTmFtZSI6IkRlbW8gVXNlciIsInNpdGVJZCI6IjcwOGJjODk4MDAwMDAwMDAwMDAwMDAwMCIsIm5vZGVJZCI6ImFjb1ltZjQiLCJpYXQiOjE3Njc5NDMwNjYsImV4cCI6MTc2ODI0MzA2NiwiaXNzIjoiNzA4YmM4OTgwMDAwMDAwMDAwMDAwMDAwIn0.DE-xgdKj7xKwvyFasmonGDgN8osqKh0bBdlqV0jK68o
+}
+
+body:json {
+  {
+      "remoteType": 4
+  }
+}
+
+settings {
+  encodeUrl: true
+}

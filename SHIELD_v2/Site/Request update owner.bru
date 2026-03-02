@@ -1,0 +1,22 @@
+meta {
+  name: Request update owner
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{BASE_URL}}/v1/site/request_update_site_owner
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "newOwnerPhone": "+918184964359",
+      "siteId": "Keus-9ae6811c-1ae9-4c74-8878-d8986573822d"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

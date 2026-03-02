@@ -1,0 +1,22 @@
+meta {
+  name: connect
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8080/connect
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "ip_address": "10.1.4.190"
+      // "ip_address": "10.1.4.20"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

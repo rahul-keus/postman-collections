@@ -1,0 +1,33 @@
+meta {
+  name: add External Device
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/{{CameraVersion}}/{{CameraId}}/addExternalDevice
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "deviceIp": "10.1.4.131",
+      "deviceUserName": "admin",
+      "devicePassword": "123456",
+      "deviceModel": "basip",
+      "label": "Dallas basip"
+  }
+  
+  // {
+  //     "deviceIp": "10.1.4.161",
+  //     "deviceUserName": "admin",
+  //     "devicePassword": "123456",
+  //     "deviceType": "vdp",
+  //     "deviceModel": "basip"
+  // }
+}
+
+settings {
+  encodeUrl: true
+}

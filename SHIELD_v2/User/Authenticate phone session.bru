@@ -1,0 +1,25 @@
+meta {
+  name: Authenticate phone session
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{BASE_URL}}/v1/user/authenticate_phone_session
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-session-id: 362159997603282947
+}
+
+body:json {
+  {
+      "otp": "814586"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

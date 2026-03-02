@@ -1,0 +1,26 @@
+meta {
+  name: update External Device
+  type: http
+  seq: 3
+}
+
+patch {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/{{CameraVersion}}/{{CameraId}}/updateExternalDevice
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "deviceId": "9b4f27c90e1b6121",
+      "deviceIp": "10.1.4.72",
+      "deviceUserName": "admin",
+      "devicePassword": "123456",
+      "deviceModel": "basip",
+      "label": "Test"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

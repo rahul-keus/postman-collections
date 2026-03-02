@@ -1,0 +1,19 @@
+meta {
+  name: Verify user token
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{BASE_URL}}/v1/end_user/verify_user_token
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-session-id: 334799016405499910
+}
+
+settings {
+  encodeUrl: true
+}

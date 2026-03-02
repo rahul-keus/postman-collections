@@ -1,0 +1,15 @@
+meta {
+  name: Get Channels
+  type: http
+  seq: 6
+}
+
+get {
+  url: http://10.1.4.52/ISAPI/Streaming/channels
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

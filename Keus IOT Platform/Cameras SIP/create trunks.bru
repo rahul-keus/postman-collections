@@ -1,0 +1,88 @@
+meta {
+  name: create trunks
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/1.0.0/kiotp.plugins.cameras.sip.addon/createTrunks
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "deviceId": "fasttel", 
+      "deviceIp": "10.1.4.89",
+      "sipConfig": {
+          
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: fasttel
+  
+  request: {
+    url: http://{{NodeHost}}:{{NodePort}}/keus/1.0.0/kiotp.plugins.cameras.external/createTrunks
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "deviceId": "fasttel", 
+          "deviceIp": "10.1.4.89",
+          "sipConfig": {
+              
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      X-Request-ID: 966689e6-bfef-4236-957e-8e9a150056a7
+      Content-Type: application/json; charset=utf-8
+      Date: Fri, 27 Jun 2025 13:22:45 GMT
+      Connection: keep-alive
+      Keep-Alive: timeout=5
+      Content-Length: 278
+    }
+  
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "success": true,
+            "data": {
+                "inBoundtrunkInfo": {
+                    "name": "inbound-fasttel",
+                    "sipTrunkId": "ST_yhgjSTF2GGuq",
+                    "allowedAddresses": [
+                        "10.1.4.202",
+                        "::1"
+                    ],
+                    "numbers": []
+                },
+                "outBoundtrunkInfo": {
+                    "name": "outbound-fasttel",
+                    "sipTrunkId": "ST_K5wBEYEfi2Wb",
+                    "address": "10.1.4.89",
+                    "numbers": [
+                        "fasttel"
+                    ]
+                }
+            }
+        }
+      '''
+    }
+  }
+}

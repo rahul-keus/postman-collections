@@ -1,0 +1,24 @@
+meta {
+  name: AddDevcie
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/1.0.0.kiotp.plugins.core.deepmedia.androidtv/AddDevice
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+  "deviceIP": "10.1.2.188",
+  "deviceName": "androidTv-ashwik",
+  "deviceType": "android_tv",
+  "deviceCategory": "tv"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

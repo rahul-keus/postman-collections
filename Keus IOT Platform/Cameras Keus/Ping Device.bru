@@ -1,0 +1,21 @@
+meta {
+  name: Ping Device
+  type: http
+  seq: 7
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/{{CameraVersion}}/{{CameraId}}/pingDevice
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "deviceId": ""
+  }
+}
+
+settings {
+  encodeUrl: true
+}

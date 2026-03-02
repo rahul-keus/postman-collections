@@ -1,0 +1,25 @@
+meta {
+  name: Authenticat phone session
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{BASE_URL}}/v1/end_user/authenticate_phone_session
+  body: json
+  auth: none
+}
+
+headers {
+  x-session-id: 362160126133534723
+}
+
+body:json {
+  {
+      "otp": "602885"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

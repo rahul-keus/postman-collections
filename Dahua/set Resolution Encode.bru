@@ -1,0 +1,27 @@
+meta {
+  name: set Resolution Encode
+  type: http
+  seq: 25
+}
+
+get {
+  url: http://10.1.4.5/cgi-bin/configManager.cgi?action=setConfig&Encode[0].MainFormat[0].Video.Compression=H.264&Encode[0].MainFormat[0].Video.Width=1280&Encode[0].MainFormat[0].Video.Height=720
+  body: none
+  auth: digest
+}
+
+params:query {
+  action: setConfig
+  Encode[0].MainFormat[0].Video.Compression: H.264
+  Encode[0].MainFormat[0].Video.Width: 1280
+  Encode[0].MainFormat[0].Video.Height: 720
+}
+
+auth:digest {
+  username: admin
+  password: admin@123
+}
+
+settings {
+  encodeUrl: true
+}

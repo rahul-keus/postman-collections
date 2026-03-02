@@ -1,0 +1,26 @@
+meta {
+  name: Install Plugin Template
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/v1/site_manager/InstallPluginTemplate
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "nodeId": "manager",
+      "templateId": "pi3_load_test:1.0.0"
+      // "templateId": "manager:1.0.4"
+      // "templateId": "hello_world_template:1.0.0"
+      // "templateId": "cameras_test:1.0.0"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,21 @@
+meta {
+  name: configure core
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://100.119.123.42:7845/configureCoreNode
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "redisAddress": "192.168.0.195:6379"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

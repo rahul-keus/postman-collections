@@ -1,0 +1,25 @@
+meta {
+  name: stop stream
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{BaseUrl}}/remove-stream
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      // "streamId" : "testing-2",
+      // "streamId" : "LK_I_testing-1",
+      "streamId" : "test",
+      // "ParticipantId": "test",
+      "roomId": "keus-test"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

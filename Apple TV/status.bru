@@ -1,0 +1,25 @@
+meta {
+  name: status
+  type: http
+  seq: 7
+}
+
+get {
+  url: http://localhost:8080/status?ip_address=10.1.4.190
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ip_address: 10.1.4.190
+}
+
+body:json {
+  {
+      "ip_address": "10.1.4.190"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

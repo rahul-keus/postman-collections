@@ -1,0 +1,21 @@
+meta {
+  name: getUser by Id
+  type: http
+  seq: 6
+}
+
+get {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/1.0.0/kiotp.plugins.core.helloworld/getUser
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "userId": "67b74a13c7088f33653de4d3"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,48 @@
+meta {
+  name: Hang Up
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://10.1.4.6/RPC2
+  body: json
+  auth: digest
+}
+
+headers {
+  accept: application/json, text/plain, */*
+  accept-language: en-US,en;q=0.9
+  cache-control: no-cache
+  content-type: application/x-www-form-urlencoded
+  pragma: no-cache
+  sec-ch-ua-mobile: ?0
+  sec-ch-ua-platform: macOS
+  sec-fetch-dest: empty
+  sec-fetch-mode: cors
+  sec-fetch-site: same-origin
+  cookie: username=admin; WebClientSessionID=af6381fe8dd294c87ab33e19e7329652; secure
+  Referer: http://10.1.4.6/
+  Referrer-Policy: strict-origin-when-cross-origin
+  ~sec-ch-ua: \"Chromium\";v=\"128\", \"Not;A=Brand\";v=\"24\", \"Google Chrome\";v=\"128\"
+}
+
+auth:digest {
+  username: admin
+  password: admin@123
+}
+
+body:json {
+  {
+      "method": "console.runCmd",
+      "params": {
+          "command": "hc"
+      },
+      "id": 139,
+      "session": "af6381fe8dd294c87ab33e19e7329652"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

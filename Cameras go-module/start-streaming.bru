@@ -1,0 +1,33 @@
+meta {
+  name: start-streaming
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{BaseUrl}}/add-stream
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "streamId": "8A061ECPCA6B8AC",
+      // "streamUrl": "rtsp://admin:cospl@123@10.1.4.53:554/ISAPI/Streaming/Channels/101",
+      // "streamUrl": "ffmpeg:rtsp://admin:Keus@2021@10.1.4.38/stream1#video=copy#audio=opus",
+      // "streamUrl": "rtsp://keus-iot-cameras:Keus@dallas1234@10.1.4.96:7447/8qn803cfDjuFyuK1",
+      // "streamUrl": "ffmpeg:/keus-iot-platform/storage/motion-recordings/9b4f27c90e1b6121/9b4f27c90e1b6121_1770388248333.mp4#input=file_once#video=TestH264#audio=copy",
+      "streamUrl": "ffmpeg:/keus-iot-platform/storage/motion-recordings/9b4f27c90e1b6121/9b4f27c90e1b6121_1770388248333.mp4#input=file_once#video=TestH264",
+      // "streamUrl": "rtsp://admin:Keus@2021@10.1.4.81/stream1",
+      // "streamUrl": "ffmpeg:rtsp://admin:Keus@2021@10.1.4.58/replay/1/1/avm?starttime=20251214t121208z&endtime=20251215t121804z#video=copy#audio=copy",
+      // "LocalMp4FilePath": "/keus-iot-platform/.cache/git.worktree/cameras/storage/9b4f27c90e1b6121_1758182840962.mp4",
+      // "overwrite": true,
+      "ParticipantId": "test",
+      // "refreshTracks": true,
+      "roomId": "keus-test"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

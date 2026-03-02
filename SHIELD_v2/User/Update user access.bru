@@ -1,0 +1,35 @@
+meta {
+  name: Update user access
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{BASE_URL}}/v1/user/update_user_access
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "userId": "35def5770000000000000000",
+      "resource": "site",
+      "permissions": [
+          {
+              "permissionId": "site:update",
+              "allowed":[
+                  {
+                      "id": "790495b10000000000000000"
+                  }
+              ],
+              "denied": [
+  
+              ]
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

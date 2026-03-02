@@ -1,0 +1,21 @@
+meta {
+  name: Verify token
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/v1/auth_service/VerifyToken
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlSWQiOiI3NjNhMzg3NTAwMDAwMDAwMDAwMDAwMDAiLCJub2RlSWQiOiJrSWVmUm15IiwiaWF0IjoxNzU0MzkyNTA5LCJleHAiOjE3NTQzOTI1MzksImlzcyI6ImtJZWZSbXkifQ.WldnujeZ9hmCnw8Xov9_vKsTZkNAeXu-h4GFd-PFULA"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

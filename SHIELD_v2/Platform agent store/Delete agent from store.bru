@@ -1,0 +1,22 @@
+meta {
+  name: Delete agent from store
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{BASE_URL}}/v1/platform_agent_store/delete_platform_agent
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "id" : "platform_agent:1.0.0-platform-agent-v2"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

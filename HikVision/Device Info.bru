@@ -1,0 +1,15 @@
+meta {
+  name: Device Info
+  type: http
+  seq: 9
+}
+
+get {
+  url: http://10.1.4.56/ISAPI/System/deviceInfo
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

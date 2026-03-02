@@ -1,0 +1,20 @@
+meta {
+  name: Event/channels
+  type: http
+  seq: 16
+}
+
+get {
+  url: http://10.1.4.56/ISAPI/Event/channels/301/capabilities
+  body: none
+  auth: digest
+}
+
+auth:digest {
+  username: admin
+  password: cospl@123
+}
+
+settings {
+  encodeUrl: true
+}

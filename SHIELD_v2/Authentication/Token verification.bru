@@ -1,0 +1,20 @@
+meta {
+  name: Token verification
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{BASE_URL}}/v1/auth/token_verification
+  body: none
+  auth: inherit
+}
+
+headers {
+  x-session-id: 334798158200569862
+  ~token: 
+}
+
+settings {
+  encodeUrl: true
+}

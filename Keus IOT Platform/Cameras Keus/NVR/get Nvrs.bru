@@ -1,0 +1,71 @@
+meta {
+  name: get Nvrs
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/{{CameraVersion}}/{{CameraId}}/getNvrs
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: get Nvrs
+  
+  request: {
+    url: http://{{NodeHost}}:{{NodePort}}/keus/{{CameraVersion}}/{{CameraId}}/getNvrs
+    method: GET
+    mode: none
+  }
+  
+  response: {
+    headers: {
+      X-Request-ID: c6f4e84f-c3f3-4b87-8e8a-01efe5136d9b
+      Content-Type: application/json; charset=utf-8
+      Date: Mon, 17 Nov 2025 13:43:06 GMT
+      Connection: keep-alive
+      Keep-Alive: timeout=5
+      Content-Length: 426
+    }
+  
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "success": true,
+            "data": [
+                {
+                    "_id": "68e3e0c176ccb60f8e9b1e14",
+                    "nvrId": "68e3e0c176ccb60f8e9b1e11",
+                    "nvrIp": "10.1.4.96",
+                    "nvrUserName": "keus-iot-cameras",
+                    "nvrPassword": "Keus@dallas1234",
+                    "deviceModel": "unifi",
+                    "apiKey": "AfEkSCYQHXFeGpQkLxqEdq4YN47qmwZO",
+                    "__v": 0
+                },
+                {
+                    "_id": "68e4df8676ccb60f8e9b560f",
+                    "nvrId": "68e4df8676ccb60f8e9b560c",
+                    "nvrIp": "10.1.4.52",
+                    "nvrUserName": "admin",
+                    "nvrPassword": "cospl@123",
+                    "deviceModel": "hikvision",
+                    "__v": 0
+                }
+            ]
+        }
+      '''
+    }
+  }
+}

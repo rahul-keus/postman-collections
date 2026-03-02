@@ -1,0 +1,26 @@
+meta {
+  name: Create site
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{BASE_URL}}/v1/site/create_site
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "site": {
+          "leadId": "ops-app-test-1",
+          "address": "bv",
+          "description": "binary veda testing",
+          "name": "bv-site"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

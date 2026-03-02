@@ -1,0 +1,24 @@
+meta {
+  name: Add Triggers Set
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/1.0.0.kiotp.plugins.general.rulesengine/AddTriggerSet
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "ruleId" : "658a76c23ebbd21017fb079e",
+      "triggerSet":{
+          "name": "test - 1 - 1"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,24 @@
+meta {
+  name: EPTZ_Mode detection types
+  type: http
+  seq: 19
+}
+
+get {
+  url: http://10.1.4.52/ISAPI/Image/channels/301/EPTZ/mode?format=json
+  body: none
+  auth: digest
+}
+
+params:query {
+  format: json
+}
+
+auth:digest {
+  username: admin
+  password: cospl@123
+}
+
+settings {
+  encodeUrl: true
+}

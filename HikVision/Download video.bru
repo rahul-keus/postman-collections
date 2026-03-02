@@ -1,0 +1,28 @@
+meta {
+  name: Download video
+  type: http
+  seq: 17
+}
+
+get {
+  url: http://10.1.4.52/ISAPI/ContentMgmt/download
+  body: xml
+  auth: digest
+}
+
+auth:digest {
+  username: admin
+  password: cospl@123
+}
+
+body:xml {
+  <downloadRequest version="1.0" xmlns="http://www.isapi.org/ver20/XMLSchema">
+    <playbackURI>
+      rtsp://10.1.4.52:554/ISAPI/Streaming/tracks/301?name=00000000872000000
+    </playbackURI>
+   </downloadRequest>
+}
+
+settings {
+  encodeUrl: true
+}

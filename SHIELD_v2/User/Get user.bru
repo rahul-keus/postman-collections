@@ -1,0 +1,26 @@
+meta {
+  name: Get user
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{BASE_URL}}/v1/user/get_user
+  body: json
+  auth: inherit
+}
+
+headers {
+  ~x-session-id: 354166692923834377
+}
+
+body:json {
+  {
+      "userId": "89a1d4c50000000000000000",
+      "includeFullDetails": true
+  }
+}
+
+settings {
+  encodeUrl: true
+}

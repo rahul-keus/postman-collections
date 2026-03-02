@@ -1,0 +1,15 @@
+meta {
+  name: Get Nodes
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/v1/site_manager/GetNodes
+  body: json
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

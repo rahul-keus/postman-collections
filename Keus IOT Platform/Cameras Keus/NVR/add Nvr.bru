@@ -1,0 +1,87 @@
+meta {
+  name: add Nvr
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/{{CameraVersion}}/{{CameraId}}/addNvr
+  body: json
+  auth: inherit
+}
+
+body:json {
+  // Dahua
+  // {
+  //     "nvrIp": "10.1.4.3",
+  //     "nvrUserName": "admin",
+  //     "nvrPassword": "admin@123",
+  //     "deviceModel": "dahua"
+  // }
+  // Hikvision
+  // {
+  //     "nvrIp": "10.1.4.52",
+  //     "nvrUserName": "admin",
+  //     "nvrPassword": "cospl@123",
+  //     "deviceModel": "hikvision",
+  //     "label": "Dallas hikvision"
+  // }
+  //Unifi
+  // {
+  //    "nvrIp": "192.168.2.239",
+  //     "nvrUserName": "keus-iot-cameras",
+  //     "nvrPassword": "fJ2WP7zQJRLgMrc",
+  //     "deviceModel": "unifi",
+  //     "apiKey": "jr-Dxrbco9ipy896QJ-KFGfU5yv6JZI4"
+  // }
+  //stonelife 
+  // {
+  //     "nvrIp": "192.168.1.1",
+  //     "nvrUserName": "keus-iot-platform",
+  //     "nvrPassword": "QTDXweAtl50LYIU",
+  //     "deviceModel": "unifi"
+  // }
+  // TP Link
+  // {
+  //     "nvrIp": "10.1.4.163",
+  //     "nvrUserName": "admin",
+  //     "nvrPassword": "Keus@2021",
+  //     "deviceModel": "tplink"
+  // }
+  // Subram sir unifi
+  // {
+  //     "nvrIp": "192.168.1.1",
+  //     "nvrUserName": "keus-iot-platform",
+  //     "nvrPassword": "QTDXweAtl50LYIU",
+  //     "deviceModel": "unifi",
+  //     "apiKey": "nR3r4EwMFx4bBr9JLI0kYit2lQltUAp2"
+  // }
+  // Dallas unifi 
+  // {
+  //     "nvrIp": "10.1.4.96",
+  //     "nvrUserName": "keus-iot-cameras",
+  //     "nvrPassword": "Keus@dallas1234",
+  //     "deviceModel": "unifi",
+  //     "apiKey": "AfEkSCYQHXFeGpQkLxqEdq4YN47qmwZO"
+  // }
+  // Ashiwk 
+  // {
+  //     "nvrIp": "10.1.2.123",
+  //     "nvrUserName": "keus-iot-platform",
+  //     "nvrPassword": "IZIn4T8r2v53",
+  //     "deviceModel": "unifi",
+  //     "apiKey": "9tZe8JjKp0shOBxqaZtJpSYK7QvLkR4f"
+  // }
+  // Navin nair 
+  {
+      "label": "Dahua NVR",
+      "nvrIp": "192.168.0.101",
+      "nvrUserName": "admin",
+      "nvrPassword": "admin@123",
+      "deviceModel": "dahua"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

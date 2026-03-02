@@ -1,0 +1,15 @@
+meta {
+  name: Migrate IR Remotes
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{BASE_URL}}/v1/migration_service/migrate_ir_remotes
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

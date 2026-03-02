@@ -1,0 +1,31 @@
+meta {
+  name: save plugin
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/api/v1/plugins_store/save_plugin
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "_id": "kiotp.plugins.core.cameras.keus",
+      "name": "test113",
+      "version": "1.0.0",
+      "displayName": "",
+      "description": "",
+      "pluginType": "core",
+      "pluginCategory": "cameras",
+      "serviceCategory": "",
+      "imageConfig": {
+          "image": ""
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

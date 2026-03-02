@@ -1,0 +1,25 @@
+meta {
+  name: remove
+  type: http
+  seq: 4
+}
+
+delete {
+  url: http://keus-public-lb1-813589603.ap-south-1.elb.amazonaws.com:3002/api/user/65b91166f75b31fe4475257f-c6e7af9045314652b1ce13b72b2d3428
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: 123456
+}
+
+body:json {
+  {
+      "username": "bob3"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

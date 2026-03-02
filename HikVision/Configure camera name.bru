@@ -1,0 +1,44 @@
+meta {
+  name: Configure camera name
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://10.1.4.56/ISAPI/System/deviceInfo
+  body: xml
+  auth: inherit
+}
+
+body:xml {
+  <?xml version="1.0" encoding="UTF-8"?>
+  <DeviceInfo version="2.0" xmlns="http://www.hikvision.com/ver20/XMLSchema">
+      <deviceName>WORK STATION 2</deviceName>
+      <deviceID>26b80000-6eee-11b3-81ad-e0ca3ca0b658</deviceID>
+      <deviceDescription>IPCamera</deviceDescription>
+      <deviceLocation>hangzhou</deviceLocation>
+      <systemContact>Hikvision.China</systemContact>
+      <model>DS-2CD1323G0E-I</model>
+      <serialNumber>DS-2CD1323G0E-I20230429AAWRL51779612</serialNumber>
+      <macAddress>e0:ca:3c:a0:b6:58</macAddress>
+      <firmwareVersion>V5.7.12</firmwareVersion>
+      <firmwareReleasedDate>build 220819</firmwareReleasedDate>
+      <encoderVersion>V7.3</encoderVersion>
+      <encoderReleasedDate>build 220727</encoderReleasedDate>
+      <bootVersion>V1.3.4</bootVersion>
+      <bootReleasedDate>100316</bootReleasedDate>
+      <hardwareVersion>0x0</hardwareVersion>
+      <deviceType>IPCamera</deviceType>
+      <telecontrolID>88</telecontrolID>
+      <supportBeep>false</supportBeep>
+      <supportVideoLoss>false</supportVideoLoss>
+      <firmwareVersionInfo>B-R-E8-0</firmwareVersionInfo>
+      <manufacturer>hikvision</manufacturer>
+      <subSerialNumber>L51779612</subSerialNumber>
+      <OEMCode>1</OEMCode>
+  </DeviceInfo>
+}
+
+settings {
+  encodeUrl: true
+}

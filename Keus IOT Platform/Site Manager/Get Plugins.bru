@@ -1,0 +1,103 @@
+meta {
+  name: Get Plugins
+  type: http
+  seq: 8
+}
+
+get {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/v1/site_manager/GetPlugins
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Get Plugins
+  
+  request: {
+    url: http://{{NodeHost}}:{{NodePort}}/keus/v1/site_manager/GetPlugins
+    method: GET
+    mode: none
+  }
+  
+  response: {
+    headers: {
+      X-Powered-By: Express
+      Access-Control-Allow-Origin: *
+      Content-Type: application/json; charset=utf-8
+      Content-Length: 858
+      ETag: W/"35a-WbsRjMoUQnQ6XofZzwEtply8hXs"
+      Date: Thu, 27 Nov 2025 11:23:24 GMT
+      Connection: keep-alive
+      Keep-Alive: timeout=5
+    }
+  
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "success": true,
+            "pluginsInfo": [
+                {
+                    "nodeId": "node-1UqZqrF",
+                    "pluginInfo": {
+                        "pluginId": "kiotp.plugins.default.helloworld",
+                        "pluginName": "Hello World",
+                        "pluginVersion": "1.0.0",
+                        "buildVersion": "1.0.0-notifications",
+                        "instanceCount": 1,
+                        "instanceType": "INTRA_PP",
+                        "services": [
+                            {
+                                "serviceName": "PluginServiceA",
+                                "serviceVersion": "1.0.0",
+                                "serviceType": "SERVICE_PLUGIN",
+                                "dependencies": {
+                                    "platformServices": [],
+                                    "pluginServices": []
+                                }
+                            },
+                            {
+                                "serviceName": "PluginServiceB",
+                                "serviceVersion": "1.0.0",
+                                "serviceType": "SERVICE_PLUGIN",
+                                "dependencies": {
+                                    "platformServices": [],
+                                    "pluginServices": []
+                                }
+                            },
+                            {
+                                "serviceName": "ZigbeeDebug",
+                                "serviceVersion": "1.0.0",
+                                "serviceType": "SERVICE_PLUGIN",
+                                "dependencies": {
+                                    "platformServices": [],
+                                    "pluginServices": []
+                                }
+                            },
+                            {
+                                "serviceName": "NotificationService",
+                                "serviceVersion": "1.0.0",
+                                "serviceType": "SERVICE_PLUGIN",
+                                "dependencies": {
+                                    "platformServices": [],
+                                    "pluginServices": []
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+      '''
+    }
+  }
+}

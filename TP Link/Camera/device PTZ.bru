@@ -1,0 +1,30 @@
+meta {
+  name: device PTZ
+  type: http
+  seq: 4
+}
+
+post {
+  url: https://{{cameraIp}}:{{port}}/stok={{stok}}
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      // ---------- Move PTZ ----------
+      "method": "cruiseMove",
+      "params": {
+          "coord": "x", // x, -x, y, -y
+          "coord_speed": "0.5" // 0 - 1.0
+      }
+      // 
+      // ---------- Stop PTZ motion ----------
+      // "method": "stopMove"
+      // 
+  }
+}
+
+settings {
+  encodeUrl: true
+}

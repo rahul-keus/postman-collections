@@ -1,0 +1,25 @@
+meta {
+  name: Build Node Manager
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{BASE_URL}}/v1/node_manager_store/publish_node_manager
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      // "branch": "dev_gateway_restructure",
+      "branch": "sk/pa_raspbian_v2",
+      "os" : "raspbian",
+      "platform:": "pi5"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,22 @@
+meta {
+  name: Snap shot Copy
+  type: http
+  seq: 8
+}
+
+get {
+  url: http://admin:cospl@123@10.1.4.52/picture/Streaming/tracks/503/?starttime=20240726T181744Z&endtime=20240726T181744Z&name=ch00005_00000001560040703232000278622&size=278622
+  body: none
+  auth: inherit
+}
+
+params:query {
+  starttime: 20240726T181744Z
+  endtime: 20240726T181744Z
+  name: ch00005_00000001560040703232000278622
+  size: 278622
+}
+
+settings {
+  encodeUrl: true
+}

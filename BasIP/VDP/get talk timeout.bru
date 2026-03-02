@@ -1,0 +1,15 @@
+meta {
+  name: get talk timeout
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://10.1.4.18/api/v1/device/call/talk/timeout
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

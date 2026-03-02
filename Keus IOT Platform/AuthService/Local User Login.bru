@@ -1,0 +1,24 @@
+meta {
+  name: Local User Login
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/local/v1/auth_service/LoginLocalUser
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "user": {
+          "id" : "service_user",
+          "password": "aade617437c93e3e2880edfed517d9a57a25caa92881691b6cc25f77905f2b99"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

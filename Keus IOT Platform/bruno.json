@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Keus IOT Platform",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

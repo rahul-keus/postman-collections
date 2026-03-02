@@ -1,0 +1,26 @@
+meta {
+  name: check headers unifi
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://192.168.1.1/proxy/protect/api/events/6787bd34018be003e4004e01/thumbnail?h=218.75&w=218.75
+  body: none
+  auth: inherit
+}
+
+params:query {
+  h: 218.75
+  w: 218.75
+}
+
+headers {
+  cookie: TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwMmZkMWYxYS0wOGEyLTQzMDQtYmI1Ny00NDEzOWU0NDViZDYiLCJwYXNzd29yZFJldmlzaW9uIjoxNzM2NTIyNTIxLCJpc1JlbWVtYmVyZWQiOnRydWUsImNzcmZUb2tlbiI6ImEzNGJjZDFiLTVlMTMtNGZhMC04YWVjLTNhM2VlNGRjYTA1YyIsImlhdCI6MTczNzExOTg0NiwiZXhwIjoxNzM5NzExODQ2LCJqdGkiOiJlYTk3ZDAwYS00OGI2LTQ2NzYtOWRkNy1kMTcxNjFkZjU0MTEifQ.hGC1pjfsBivR2t10uUtkBxtokS8JV7cqsQqnWEQuYj4
+  Content-Type: application/json
+  x-csrf-token: a34bcd1b-5e13-4fa0-8aec-3a3ee4dca05c
+}
+
+settings {
+  encodeUrl: true
+}

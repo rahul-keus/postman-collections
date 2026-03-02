@@ -1,0 +1,24 @@
+meta {
+  name: addDeviceToMediaMtx
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/1.0.0/kiotp.plugins.core.cameras.keus/addDeviceToMediaMtx
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+     "deviceId": "6K042F7PAG2C5B5",
+     "source": "rtsp://admin:admin@123@10.1.4.154:554/cam/realmonitor?channel=1&subtype=0",
+     "sourceOnDemand": true
+  
+  }
+}
+
+settings {
+  encodeUrl: true
+}

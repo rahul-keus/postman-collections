@@ -1,0 +1,22 @@
+meta {
+  name: set rtsp
+  type: http
+  seq: 10
+}
+
+post {
+  url: http://10.1.4.218/api/v1/device/settings/rtsp
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "username": "admin",
+    "password": "123456"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

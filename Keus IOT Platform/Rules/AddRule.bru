@@ -1,0 +1,49 @@
+meta {
+  name: AddRule
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/1.0.0.kiotp.plugins.general.rulesengine/AddRule
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "name": automation.name,
+      "description": automation.description,
+      "enabled": automation.enabled,
+      "roomId": get(StoreSubscriber.storeState).roomsInfo.activeRoomId || '',
+      "conditions": [
+          [
+              {
+                  "id": "6658b9e69bd915790515f07b",
+                  "name": "0-0",
+                  "conditions": [
+                      {
+                          "id": "0",
+                          "operation": null,
+                          "name": "Execute scene|Netflix",
+                          "eventId": "wBG1peLfom-158",
+                          "type": "SCENE",
+                          "data": null,
+                          "key": null
+                      }
+                  ]
+              }
+          ]
+      ],
+      "event": {
+          "type": 'rule',
+          "params": {
+              "routines": actions
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

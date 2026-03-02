@@ -1,0 +1,26 @@
+meta {
+  name: get inter plugin installer script
+  type: http
+  seq: 7
+}
+
+post {
+  url: https://testapp.keus.in/api/v1/plugins_store/get_inter_plugin_installer_script
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "id": "kiotp.plugins.core.cameras.keus",
+      "localPluginPath": "/keus-iot-platform/plugins/kiotp.plugins.cameras.core/",
+      "namespace": "Keus-dev-gateway-test-new-8243",
+      "pluginNodeId": "xxx",
+      "nodeId" : "f7acpC9",
+      "isProduction": true
+  }
+}
+
+settings {
+  encodeUrl: true
+}

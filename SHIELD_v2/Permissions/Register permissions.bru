@@ -1,0 +1,36 @@
+meta {
+  name: Register permissions
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{BASE_URL}}/v1/permission/register_permissions
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "permissions": [
+          {
+              "name" : "view",
+              "displayName": "View Site",
+              "resource": "site",
+              "description": "access to update site",
+              "contextFields": [ "id" ]
+          },
+          {
+              "name" : "update",
+              "displayName": "Update Site",
+              "resource": "site",
+              "description": "access to update site",
+              "contextFields": [ "id" ]
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

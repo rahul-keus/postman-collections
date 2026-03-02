@@ -1,0 +1,21 @@
+meta {
+  name: DeleteRule
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/1.0.0.kiotp.plugins.general.rulesengine/DeleteRule
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "ruleId" :"658ac13c2520e7a01d15c02a"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,37 @@
+meta {
+  name: Add Action
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/1.0.0.kiotp.plugins.general.rulesengine/AddActionToRule
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "ruleId": "658ae4057a553dc0de6cf46e",
+      "action": {
+          "type": "ACTION",
+          "name": "Turn Off Tv",
+          "waitTillCompletion": false,
+          "actionData": {
+              "pluginId": "1.0.0.kiotp.plugins.core.deepmedia",
+              "call": "Execute",
+              "data": {
+                  "id": "",
+                  "deviceCategory": "tv",
+                  "deviceType": "android_tv",
+                  "executionId": 1,
+                  "executionData": 0
+              }
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

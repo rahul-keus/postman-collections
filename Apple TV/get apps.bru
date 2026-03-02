@@ -1,0 +1,21 @@
+meta {
+  name: get apps
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:8080/apps
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "ip_address": "10.1.4.20"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

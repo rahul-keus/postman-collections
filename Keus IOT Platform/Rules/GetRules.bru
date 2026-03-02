@@ -1,0 +1,15 @@
+meta {
+  name: GetRules
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/1.0.0.kiotp.plugins.general.rulesengine/GetRules
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

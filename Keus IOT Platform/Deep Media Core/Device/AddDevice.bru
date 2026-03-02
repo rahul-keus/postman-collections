@@ -1,0 +1,32 @@
+meta {
+  name: AddDevice
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3000/keus/1.0.0.kiotp.plugins.core.deepmedia/AddDevices
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "deviceId": "66588233b6850cfb95168514",
+      "deviceType": "sony",
+      "deviceCategory": "tv",
+      "deviceIP": "192.168.0.219",
+      "authToken": "keus-iot-sony",
+      "deviceName": "Sony 55",
+      "appliances": [],
+      "roomId": "psHIrcIdGc",
+      "location": "null",
+      "serviceId": "kiotp.plugins.core.deepmedia.tv.sonytv",
+      "serviceVersion": "1.0.0",
+      "tcpEnabled": true
+  }
+}
+
+settings {
+  encodeUrl: true
+}

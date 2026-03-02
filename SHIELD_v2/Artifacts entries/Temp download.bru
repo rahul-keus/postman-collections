@@ -1,0 +1,26 @@
+meta {
+  name: Temp download
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{BASE_URL}}/v1/artifact/temp.download
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJkZW1vX3VzZXIiLCJ1c2VyTmFtZSI6IkRlbW8gVXNlciIsInNpdGVJZCI6Ijc1ZTY0ODJjMDAwMDAwMDAwMDAwMDAwMCIsIm5vZGVJZCI6Im5vZGUtYVZYcThBYSIsImlhdCI6MTc2NTI2ODMxNiwiZXhwIjoxNzY1NTY4MzE2LCJpc3MiOiI3NWU2NDgyYzAwMDAwMDAwMDAwMDAwMDAifQ.8H8_NglkT40Xh0pJ5Z3GKDFDzc125k-maGENYTX6VpA
+}
+
+body:json {
+  {
+      "path" : "plugins/kiotp.plugins.default.helloworld-inter/1.0.0:kiotp.plugins.default.helloworld-inter.tar.gz"
+      // "path": "platform-artifacts/nats/phoenix/nats-1.1.0.tar.gz"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

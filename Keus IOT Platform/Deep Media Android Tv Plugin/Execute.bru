@@ -1,0 +1,23 @@
+meta {
+  name: Execute
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/1.0.0.kiotp.plugins.core.deepmedia.androidtv/Execute
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "deviceId":"6587eb71b8b7422d000e2b61",
+      "actionId": 26,
+      "actionData": null
+  }
+}
+
+settings {
+  encodeUrl: true
+}

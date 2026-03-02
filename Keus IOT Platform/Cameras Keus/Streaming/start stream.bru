@@ -1,0 +1,37 @@
+meta {
+  name: start stream
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/{{CameraVersion}}/{{CameraId}}/startStreaming
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "deviceIds": [
+          // "I20230213AAWRL28326184",
+          // "I20230213AAWRL28326174",
+          // "I20230429AAWRL51779612",
+          // "I20230201AAWRL23999652",
+          // "LIU20240318AAWRFB4980056",
+          // "6697bde601493403e4000460",
+          "672dc2b60006a603e400121d"
+          // "17a6f1294606a593",
+          // "9b4f27c90e1b6121"
+          // "80263CCDD14EDA118B88875425CF71BA2424B0D4"
+      ],
+      "roomId": "room-keus",
+      "startTime": 0,
+      "endTime": 0
+      // "startTime": 1759765254,
+      // "endTime": 1759773254
+  }
+}
+
+settings {
+  encodeUrl: true
+}

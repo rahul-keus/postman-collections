@@ -1,0 +1,23 @@
+meta {
+  name: Get all agents
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{BASE_URL}}/v1/platform_agent_store/get_all_platform_agents
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      // "branch": "platform-agent-v2",
+      // "platform" : "phoenix"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

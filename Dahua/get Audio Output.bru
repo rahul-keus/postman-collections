@@ -1,0 +1,30 @@
+meta {
+  name: get Audio Output
+  type: http
+  seq: 8
+}
+
+get {
+  url: http://10.1.4.2/cgi-bin/devAudioOutput.cgi?action=getCollect
+  body: none
+  auth: digest
+}
+
+params:query {
+  action: getCollect
+}
+
+headers {
+  Content-Type: Audio/G.711A
+  User-Agent: client/1.0
+  ~Content-Length: 999999
+}
+
+auth:digest {
+  username: admin
+  password: admin@123
+}
+
+settings {
+  encodeUrl: true
+}

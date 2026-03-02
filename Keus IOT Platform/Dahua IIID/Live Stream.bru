@@ -1,0 +1,28 @@
+meta {
+  name: Live Stream
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/1.0.0/kiotp.plugins.core.cameras.keus/initiateLiveStream
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "data": {
+          "type": "offer",
+          "cameraId": "6K042F7PAG2C5B5",
+          "Data": {
+              "cameraId": "6K042F7PAG2C5B5",
+              "offer": "v=0\r\no=- 3912656638866701755 2 IN IP4 127.0.0.1\r\ns=-\r\nt=0 0\r\na=extmap-allow-mixed\r\na=msid-semantic: WMS\r\n"
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,19 @@
+meta {
+  name: Ping
+  type: http
+  seq: 9
+}
+
+get {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/v1/site_manager/Ping
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJkZW1vLXVzZXIiLCJzaXRlSWQiOiI5OTUxMTZhYzAwMDAwMDAwMDAwMDAwMDB0ZXN0Iiwibm9kZUlkIjoianZjTDB0ZiIsImlhdCI6MTc2MDM0OTMxNywiZXhwIjoxNzkxODg1MzE3LCJpc3MiOiI5OTUxMTZhYzAwMDAwMDAwMDAwMDAwMDB0ZXN0In0.um-uIL5ekzobH-qV0_ZrmHHI3H7Hi1sSOVJLm7tHobc
+}
+
+settings {
+  encodeUrl: true
+}

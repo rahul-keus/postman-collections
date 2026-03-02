@@ -1,0 +1,21 @@
+meta {
+  name: http://localhost:9997/v3/config/paths/replace/cam3
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:9997/v3/config/paths/replace/cam3
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "name": "compressed"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

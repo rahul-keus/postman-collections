@@ -1,0 +1,25 @@
+meta {
+  name: Log out session
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{BASE_URL}}/v1/end_user/logout_phone_session
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-session-id: 334799738295549958
+}
+
+body:json {
+  {
+      "phoneNumber": "+912345678911"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,73 @@
+meta {
+  name: Install plugin
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/v1/site_manager/InstallPlugin
+  body: json
+  auth: inherit
+}
+
+body:json {
+  // // Local
+  {
+      "nodeId": "V6cO8a8",
+      // "launchType": "INTRA_PP",
+      "launchType": "INTER_PP",
+      // "localPluginPath": "/keus-iot-platform/packages/plugins-default/deepmedia/plugin-core-deepmedia",
+      // "localPluginPath": "/keus-iot-platform/packages/plugins-default/deepmedia/plugin-deepmedia-lgtv",
+      // "localPluginPath": "/keus-iot-platform/plugins/kiotp.plugins.general.motion/",
+      // "localPluginPath": "/keus-iot-platform/plugins/kiotp.plugins.core.cameras.keus/",
+      // "localPluginPath": "/keus-iot-platform/plugins/kiotp.plugins.cameras.multi.node/",
+      // "localPluginPath": "/keus-iot-platform/plugins/kiotp.plugins.cameras.core/",
+      // "id": "kiotp.plugins.core.cameras.keus",
+      // "id": "kiotp.plugins.cameras.core",
+      "id": "kiotp.plugins.cameras.cv.addon",
+      // "id": "kiotp.plugins.general.motion",
+      // "id": "kiotp.plugins.core.puppeteer",
+      // "localPluginPath": "/keus-iot-platform/packages/plugins-default/plugin-deepmedia-appletv/",
+      // "localPluginPath": "/keus-iot-platform/packages/plugins-default/device/ac-fan",
+      // "localPluginPath": "/keus-iot-platform/packages/plugins-default/plugin-core-deepmedia/",
+      // "localPluginPath": "/keus-iot-platform/packages/plugins-default/plugin-cameras-keus/",
+      // "localPluginPath": "/keus-iot-platform/packages/plugins-default/plugin-cameras-core/",
+      // "localPluginPath": "/keus-iot-platform/packages/plugins-default/core/home-automation",
+      // "localPluginPath": "/keus-iot-platform/packages/plugins-default/plugin-cameras-external/"
+      // "localPluginPath": "/keus-iot-platform/packages/plugins-default/plugin-motion-detection/"
+      // "localPluginPath": "/keus-iot-platform/packages/plugins-default/plugin-puppeteer",
+      // "localPluginPath": "/keus-iot-platform/packages/plugins-default/plugin-helloworld",
+      // "localPluginPath": "/keus-iot-platform/packages/plugins-default/plugin-deepmedia-androidtv",
+      // "localPluginPath": "/keus-iot-platform/packages/plugins-default/plugin-deepmedia-samsungtv",
+      // "localPluginPath": "/keus-iot-platform/packages/plugins-default/plugin-deepmedia-sonytv",
+      // "localPluginPath": "/keus-iot-platform/packages/plugins-default/plugin-general-hubbridge",
+      // "localPluginPath": "/keus-iot-platform/packages/plugins-default/plugin-general-rulesengine",
+      // "version":"2.0.0"
+      // "parentServiceId" : "kiotp.plugins.core.deepmedia.tv.appletv"
+      // "id": "kiotp.plugins.cameras.external",
+      // "localPluginPath": "/keus-iot-platform/plugins/kiotp.plugins.core.cameras.keus/",
+      // "localPluginPath": "/keus-iot-platform/plugins/kiotp.plugins.cameras.sip.addon/",
+      // "id": "kiotp.plugins.default.helloworld-inter",
+      // "id": "kiotp.plugins.default.helloworld",
+      // "id": "kiotp.plugins.cameras.sip.addon",
+      // "id": "kiotp.plugins.default.core",
+      // "id": "kiotp.plugins.default.helloworld-inter",
+      // "version": "1.0.0-dev_gateway_restructure"
+      // "version": "1.0.0-notifications"
+      "version": "1.0.0"
+      
+  }
+  
+  // Cloud
+  // {
+  //     "nodeId": "4uUWgqF",
+  //     "launchType": "INTER_PP",
+  //     "id": "kiotp.plugins.core.cameras.keus",
+  //     // "id": "kiotp.plugins.core.deepmedia.tv.appletv",
+  //     "version": "1.0.0"
+  // }
+}
+
+settings {
+  encodeUrl: true
+}

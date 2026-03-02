@@ -1,0 +1,26 @@
+meta {
+  name: set Audio
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://10.1.4.4/cgi-bin/configManager.cgi?action=setConfig&Encode[0].MainFormat[0].Audio.Compression=G.711A&Encode[0].MainFormat[0].Audio.Frequency=8000
+  body: none
+  auth: basic
+}
+
+params:query {
+  action: setConfig
+  Encode[0].MainFormat[0].Audio.Compression: G.711A
+  Encode[0].MainFormat[0].Audio.Frequency: 8000
+}
+
+auth:basic {
+  username: admin
+  password: admin@123
+}
+
+settings {
+  encodeUrl: true
+}

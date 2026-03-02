@@ -1,0 +1,35 @@
+meta {
+  name: SMD startFind
+  type: http
+  seq: 27
+}
+
+post {
+  url: http://10.1.4.127/cgi-bin/api/SmdDataFinder/startFind
+  body: json
+  auth: digest
+}
+
+auth:digest {
+  username: admin
+  password: admin@123
+}
+
+body:json {
+  {
+      "Condition": {
+          "StartTime": "2024-09-30 19:00:00",
+          "EndTime": "2024-09-30 23:59:59",
+          "Order": "ascOrder",
+          "SmdType": [
+              "smdTypeHuman",
+              "smdTypeVehicle"
+          ],
+          "Channel": 3
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

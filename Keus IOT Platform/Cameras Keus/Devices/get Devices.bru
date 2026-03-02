@@ -1,0 +1,15 @@
+meta {
+  name: get Devices
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/{{CameraVersion}}/{{CameraId}}/getDevices
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

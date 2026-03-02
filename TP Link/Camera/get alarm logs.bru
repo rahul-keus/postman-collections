@@ -1,0 +1,29 @@
+meta {
+  name: get alarm logs
+  type: http
+  seq: 3
+}
+
+post {
+  url: https://{{cameraIp}}:{{port}}/stok={{stok}}
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "method": "searchSystemLog",
+      "params": {
+          "start_time": "1758177033",
+          "end_time": "1758198633",
+          "log_type": "alarm"
+          // "sub_type": "Motion Detection"
+          // "sub_type": "Human Detection"
+          // "sub_type": "Vehicle Detection"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

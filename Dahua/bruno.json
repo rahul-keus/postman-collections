@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Dahua",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

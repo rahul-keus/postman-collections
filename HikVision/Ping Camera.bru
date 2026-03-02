@@ -1,0 +1,15 @@
+meta {
+  name: Ping Camera
+  type: http
+  seq: 23
+}
+
+get {
+  url: http://10.1.4.52/ISAPI/ContentMgmt/InputProxy/channels/status
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

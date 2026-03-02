@@ -1,0 +1,92 @@
+meta {
+  name: create_plugin_template
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{BASE_URL}}/v1/plugin_template_store/create_plugin_template
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "pluginTemplate": {
+          // "name": "device_test",
+          "name": "manager",
+          "version": "1.0.3",
+          // "description": "this is test template for gateway migration.",
+          "description": "core plugin and device plugins of cv3 and cv6",
+          "plugins": [
+              // {
+              //     "pluginId": "kiotp.plugins.default.helloworld",
+              //     "pluginVersion": "1.0.0",
+              //     "installationType": "INTRA_PP"
+              // },
+              // {
+              //     "pluginId": "kiotp.plugins.default.helloworld-inter",
+              //     "pluginVersion": "1.0.0",
+              //     "installationType": "INTER_PP"
+              // },
+              {
+                  "pluginId": "kiotp.plugins.default.core",
+                  "pluginVersion": "1.0.0-hunterdouglas-e2e-flow",
+                  "installationType": "INTRA_PP"
+              },
+              {
+                  "pluginId": "kiotp.plugins.default.device.lightscv3.plugin",
+                  "pluginVersion": "1.0.0-ops-cv6",
+                  "installationType": "INTRA_PP"
+              },
+              {
+                  "pluginId": "kiotp.plugins.default.device.lightscv6.plugin",
+                  "pluginVersion": "1.0.0-ops-cv6",
+                  "installationType": "INTRA_PP"
+              },
+              {
+                  "pluginId": "kiotp.plugins.default.device.irblaster.plugin",
+                  "pluginVersion": "1.0.0-ops-cv6",
+                  "installationType": "INTRA_PP"
+              }
+              // {
+              //     "pluginId": "kiotp.plugins.core.deepmedia",
+              //     "pluginVersion": "1.0.0",
+              //     "installationType": "INTRA_PP"
+              // },
+              // {
+              //     "pluginId": "kiotp.plugins.core.deepmedia.tv.lgtv",
+              //     "pluginVersion": "1.0.0",
+              //     "installationType": "INTRA_PP"
+              // },
+              // {
+              //     "pluginId": "kiotp.plugins.core.deepmedia.tv.appletv",
+              //     "pluginVersion": "1.0.0",
+              //     "installationType": "INTER_PP"
+              // }
+  
+              // {
+              //     "pluginId": "kiotp.plugins.cameras.core",
+              //     "pluginVersion": "1.0.0",
+              //     "installationType": "INTER_PP"
+              // },
+              // {
+              //     "pluginId": "kiotp.plugins.cameras.sip.addon",
+              //     "pluginVersion": "1.0.0",
+              //     "installationType": "INTER_PP"
+              // }
+  
+              // {
+              //     "pluginId": "kiotp.plugins.default.device.zigbeedimmable.plugin",
+              //     "pluginVersion": "1.0.0",
+              //     "installationType": "INTRA_PP"
+              // }
+          ]
+      }
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,15 @@
+meta {
+  name: sip enable
+  type: http
+  seq: 7
+}
+
+get {
+  url: http://10.1.4.218/api/v1/device/sip2/enable
+  body: json
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

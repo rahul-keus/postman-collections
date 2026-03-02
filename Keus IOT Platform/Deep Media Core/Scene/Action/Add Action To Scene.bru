@@ -1,0 +1,31 @@
+meta {
+  name: Add Action To Scene
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/1.0.0.kiotp.plugins.core.deepmedia/AddActionToScene
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "sceneId": "6584442d16e02b55473f6fcb",
+      "action": {
+          "name": "delay",
+          "type": "execute-delay",
+          "waitTillCompletion": false,
+          "actionData": {
+              "pluginId": "",
+              "call": "",
+              "data": 5
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

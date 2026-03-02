@@ -1,0 +1,28 @@
+meta {
+  name: Get user variations (gateway)
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{BASE_URL}}/v1/multiflow/external.get_user_variations
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: TIZmxd8RPBi0XVGze7lsZg7bv9TmURKb0MTt7PtkKw6LYleSXAINhz1QMBOdnw5iBjtv5TA
+}
+
+body:json {
+  {
+      "userId" : "platform_agent_11a9cc120000000000000000_node-O5kcqmF",
+      // "featureFlagKeys" : ["platform-agent"],
+      "projectKey": "platform-agent"
+      // "projectKey": "testing"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

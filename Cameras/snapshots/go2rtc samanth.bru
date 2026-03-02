@@ -1,0 +1,21 @@
+meta {
+  name: go2rtc samanth
+  type: http
+  seq: 7
+}
+
+get {
+  url: http://192.168.0.195:1984/api/frame.jpeg?src=test2&h=360&w=640
+  body: none
+  auth: inherit
+}
+
+params:query {
+  src: test2
+  h: 360
+  w: 640
+}
+
+settings {
+  encodeUrl: true
+}

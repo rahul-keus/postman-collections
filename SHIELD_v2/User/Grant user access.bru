@@ -1,0 +1,28 @@
+meta {
+  name: Grant user access
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{BASE_URL}}/v1/user/grant_resource_access
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "userId": "89a1d4c50000000000000000",
+      "resource": "site",
+      "accessType" : "allow",
+      // "accessType" : "deny",
+      "resourceContext": {
+                          "id": "2756357a0000000000000000"
+                      },
+      "permissionIds": ["site:update"]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

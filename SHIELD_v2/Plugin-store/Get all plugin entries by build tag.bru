@@ -1,0 +1,24 @@
+meta {
+  name: Get all plugin entries by build tag
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{BASE_URL}}/v1/plugin_store/get_all_plugin_entries_by_buildtag
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      // "buildTag" : "testing",
+      // "pluginId" : "kiotp.plugins.default.helloworld"
+      "pluginId" : "kiotp.plugins.default.helloworld-inter"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,26 @@
+meta {
+  name: Delete backup
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{BASE_URL}}/v1/site_backup/delete_backup
+  body: json
+  auth: inherit
+}
+
+headers {
+  ~x-session-id: 349410806783279113
+}
+
+body:json {
+  {
+      "siteId": "81bfc5320000000000000000",
+      "backupId": "df819847-3fde-43e5-91de-fa6e88efca78"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

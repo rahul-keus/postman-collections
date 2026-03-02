@@ -1,0 +1,28 @@
+meta {
+  name: SMD doFind
+  type: http
+  seq: 26
+}
+
+post {
+  url: http://10.1.4.127/cgi-bin/api/SmdDataFinder/doFind
+  body: json
+  auth: digest
+}
+
+auth:digest {
+  username: admin
+  password: admin@123
+}
+
+body:json {
+  {
+      "Token": 3001,
+      "Offset": 0,
+      "Count": 11
+  }
+}
+
+settings {
+  encodeUrl: true
+}

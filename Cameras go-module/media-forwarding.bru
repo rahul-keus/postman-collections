@@ -1,0 +1,28 @@
+meta {
+  name: media-forwarding
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{BaseUrl}}/start-media-forwarding
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      
+      "participantId": "sai__ozhb",
+      "sources": ["microphone"],
+      "roomId": "keus-test",
+      "protocol": "udp",
+      "udp": {
+          "url": "10.1.4.142:7004"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

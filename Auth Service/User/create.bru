@@ -1,0 +1,30 @@
+meta {
+  name: create
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://keus-public-lb1-813589603.ap-south-1.elb.amazonaws.com:3002/api/user
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: 123456
+}
+
+body:json {
+  {
+      "name": "user",
+      "email": "user@gmail.com",
+      "password": "user",
+      "username": "user",
+      "phone": "6309955676",
+      "accountId": "65b91160f75b31fe4475257d"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

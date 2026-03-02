@@ -1,0 +1,25 @@
+meta {
+  name: DisplayRealm
+  type: http
+  seq: 7
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/v1/node_configuration/DisplayRealm
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "services": [{
+          "id": "PLUGIN_CORE",
+          "serviceType": "INTRA_PROCESS",
+          "serviceFile": "/services/plugin-core/index"
+      }]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

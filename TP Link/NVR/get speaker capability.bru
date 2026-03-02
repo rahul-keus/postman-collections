@@ -1,0 +1,27 @@
+meta {
+  name: get speaker capability
+  type: http
+  seq: 5
+}
+
+get {
+  url: https://{{nvrIp}}:{{port}}/openapiaudiooutputsound?channel=1
+  body: none
+  auth: bearer
+}
+
+params:query {
+  channel: 1
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyAidXNyIjogImFkbWluIiwgImdycCI6ICJyb290IiwgImV4cCI6ICIyMDI1LTA5LTE4IDA0OjI3OjM2IiB9.MKQog+umH3Xfp0We7YY/CTsTfhp8ZOQ38b07Ssptj0IeEgeibGqnS8MXSu1Qokd/6sFY6grnP0lJm2JkLp7XxNVKuuMKDWZqM/sV4BAmcn2gfo2kU6ouFxGpX2qvIl8YaI250VMoANOWtAaWo0d0NiF2htlYgA33319LnqoGiG8=
+}
+
+settings {
+  encodeUrl: true
+}

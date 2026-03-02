@@ -1,0 +1,21 @@
+meta {
+  name: Delete plugin
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{BASE_URL}}/v1/plugin_store/delete_plugin
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "id" : "kiotp.plugins.default.helloworld-inter:1.0.0-shield_feature_artifact_store"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

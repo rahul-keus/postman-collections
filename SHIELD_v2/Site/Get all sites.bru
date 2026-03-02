@@ -1,0 +1,15 @@
+meta {
+  name: Get all sites
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{BASE_URL}}/v1/site/get_all_sites
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

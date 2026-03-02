@@ -1,0 +1,50 @@
+meta {
+  name: addCamera
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/1.0.0/kiotp.plugins.core.cameras.keus/addCamera
+  body: json
+  auth: inherit
+}
+
+body:json {
+  // {
+  //    "deviceId": "l74lwF71RIBxun19",
+  //    "deviceName": "unifi1",
+  //     "deviceType": "camera",
+  //    "deviceIp": "10.1.4.192",
+  //    "audioSupported": false,
+  //    "deviceUserName": "admin",
+  //    "devicePassword": "admin@123",
+  //    "deviceModel": "unify"
+  // }
+  
+  {
+     "deviceId": "9A01072PAJB3E1F",
+     "deviceName": "9A01072PAJB3E1F",
+      "deviceType": "vdp",
+     "deviceIp": "10.1.9.66",
+     "audioSupported": true,
+     "deviceUserName": "admin",
+     "devicePassword": "admin@123",
+     "deviceModel": "dahua"
+  }
+  
+  // {
+  //    "deviceId": "8E0C35EPAJ2F9F3",
+  //    "deviceName": "8E0C35EPAJ2F9F3",
+  //     "deviceType": "vdp",
+  //    "deviceIp": "10.1.9.65",
+  //    "audioSupported": true,
+  //    "deviceUserName": "admin",
+  //    "devicePassword": "admin@123",
+  //    "deviceModel": "dahua"
+  // }
+}
+
+settings {
+  encodeUrl: true
+}

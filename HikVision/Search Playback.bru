@@ -1,0 +1,75 @@
+meta {
+  name: Search Playback
+  type: http
+  seq: 20
+}
+
+post {
+  url: http://10.1.4.56/ISAPI/ContentMgmt/search
+  body: xml
+  auth: inherit
+}
+
+body:xml {
+  <?xml version="1.0" encoding="utf-8"?>
+   <CMSearchDescription>
+    <searchID>C77384AD-66A0-0001-E7C2-1151F04F90B0</searchID>
+    <trackIDList>
+      <trackID>101</trackID>
+    </trackIDList>
+   <timeSpanList>
+   <timeSpan>
+        <startTime>2024-04-02T16:00:00Z</startTime>
+        <endTime>2024-04-02T15:59:59Z</endTime>
+   </timeSpan>
+   </timeSpanList>
+    <maxResults>40</maxResults>
+   <searchResultPostion>0</searchResultPostion>
+    <metadataList>
+      <metadataDescriptor>//recordType.meta.std-cgi.com</metadataDescriptor>
+    </metadataList>
+   </CMSearchDescription>
+}
+
+script:post-response {
+  
+  test("Response status code is 200", function () {
+    expect(res.getStatus()).to.equal(200);
+  });
+  
+  
+  test("Content-Type header is application/xml", function () {
+      expect(res.getHeader('Content-Type')).to.include('application/xml');
+  });
+  
+  
+  test("Validate the CMSearchResult object", function () {
+    const responseData = xml2Json(JSON.stringify(res.getBody()));
+    
+    expect(responseData).to.be.an('object');
+    expect(responseData.CMSearchResult).to.exist;
+  });
+  
+  
+  test("SearchID is present and in a valid format", function () {
+      const responseData = xml2Json(JSON.stringify(res.getBody()));
+      
+      expect(responseData).to.have.property("CMSearchResult");
+      expect(responseData.CMSearchResult).to.have.property("$");
+      expect(responseData.CMSearchResult["$"]).to.have.property("searchID").that.is.a('string').and.to.match(/^[a-zA-Z0-9]+$/);
+  });
+  
+  
+  test("ResponseStatus is not empty", function () {
+      const responseData = xml2Json(JSON.stringify(res.getBody()));
+      
+      expect(responseData).to.be.an('object');
+      expect(responseData.CMSearchResult.responseStatus).to.exist.and.to.not.be.empty;
+  });
+  
+  
+}
+
+settings {
+  encodeUrl: true
+}

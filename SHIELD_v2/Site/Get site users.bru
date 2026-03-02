@@ -1,0 +1,21 @@
+meta {
+  name: Get site users
+  type: http
+  seq: 12
+}
+
+post {
+  url: {{BASE_URL}}/v1/site/get_site_users
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "siteId": "2eb50de90000000000000000"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

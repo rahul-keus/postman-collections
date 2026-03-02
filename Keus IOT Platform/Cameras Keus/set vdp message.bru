@@ -1,0 +1,29 @@
+meta {
+  name: set vdp message
+  type: http
+  seq: 13
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/1.0.0/kiotp.plugins.cameras.core/setVdpMessage
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "deviceId" : "6697bde601493403e4000460",
+      "lcdMessage" : {
+          "duration": 30,
+          "resetAt": 0,
+          "text": "Hello",
+          // "text": "Leave Package At Door",
+          "type": "DEFAULT"
+          // "type": "LEAVE_PACKAGE_AT_DOOR"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

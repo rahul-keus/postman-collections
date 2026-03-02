@@ -1,0 +1,22 @@
+meta {
+  name: Recording modes
+  type: http
+  seq: 22
+}
+
+post {
+  url: http://10.1.4.52/ISAPI/ContentMgmt/record/tracks/301/dailyDistribution
+  body: xml
+  auth: inherit
+}
+
+body:xml {
+   <trackDailyParam version="2.0" xmlns="http://www.hikvision.com/ver20/XMLSchema">
+    <year>2024</year>
+    <monthOfYear>04</monthOfYear> 
+  </trackDailyParam>
+}
+
+settings {
+  encodeUrl: true
+}

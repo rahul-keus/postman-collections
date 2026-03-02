@@ -1,0 +1,71 @@
+meta {
+  name: create dispatch rule
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/1.0.0/kiotp.plugins.cameras.sip.addon/createDispatchRule
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "deviceId": "fasttel", 
+      "trunkIds": ["ST_yhgjSTF2GGuq"]
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: fasttel rule
+  
+  request: {
+    url: http://{{NodeHost}}:{{NodePort}}/keus/1.0.0/kiotp.plugins.cameras.external/createDispatchRule
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "deviceId": "fasttel", 
+          "trunkIds": ["ST_yhgjSTF2GGuq"]
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      X-Request-ID: dce99d01-959b-4343-be3b-659d7424a2e4
+      Content-Type: application/json; charset=utf-8
+      Date: Fri, 27 Jun 2025 13:23:46 GMT
+      Connection: keep-alive
+      Keep-Alive: timeout=5
+      Content-Length: 150
+    }
+  
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "success": true,
+            "data": {
+                "name": "dispatch-rule-fasttel",
+                "ruleId": "SDR_gHrAaCe2VBEP",
+                "roomName": "keus-talkback-fasttel",
+                "trunkIds": [
+                    "ST_yhgjSTF2GGuq"
+                ]
+            }
+        }
+      '''
+    }
+  }
+}

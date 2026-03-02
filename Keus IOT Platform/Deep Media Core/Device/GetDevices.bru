@@ -1,0 +1,23 @@
+meta {
+  name: GetDevices
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/1.0.0.kiotp.plugins.core.deepmedia/GetDevices
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      // "deviceCategory":"tv",
+      // "deviceType": "android_tv"
+      "type" : []
+  }
+}
+
+settings {
+  encodeUrl: true
+}

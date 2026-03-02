@@ -1,0 +1,22 @@
+meta {
+  name: New Request
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://otipvdp.com/apache-v3.0/personlogin
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "Account": "rahul.thotakura@keus.in",
+      "passwd": "Lj6rphfm"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

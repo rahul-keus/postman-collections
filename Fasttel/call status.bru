@@ -1,0 +1,15 @@
+meta {
+  name: call status
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://10.1.4.89/api/call/status
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,29 @@
+meta {
+  name: Sync all environment user variations (extermal)
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{BASE_URL}}/v1/multiflow/external.sync_all_environment_user_variations
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "organization":{
+          "id": "b191580c-32ce-477d-9652-27956a3f0fa5"
+      },
+      "project":{
+          "id": "382e3466-0e02-4e71-acc9-b3ae00c67039"
+      },
+      "environment": {
+          "id" : "99d4d567-ef2a-42d7-a706-152e680108d8"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

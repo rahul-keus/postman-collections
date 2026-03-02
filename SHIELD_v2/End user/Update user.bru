@@ -1,0 +1,27 @@
+meta {
+  name: Update user
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{BASE_URL}}/v1/end_user/update_user
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "user":{
+          "id" : "707cf30b0000000000000000",
+          "email":  "aravasaiteja0@gmail.com",
+          "phone": "+9123456789",
+          "givenName": "end user",
+          "familyName": "arava update"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

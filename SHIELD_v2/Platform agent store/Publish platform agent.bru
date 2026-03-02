@@ -1,0 +1,25 @@
+meta {
+  name: Publish platform agent
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{BASE_URL}}/v1/platform_agent_store/publish_platform_agent
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      // "branch": "dev_gateway_restructure",
+      "branch": "sk/pa_raspbian_v2",
+      "os" : "raspbian",
+      "platform:": "pi5"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

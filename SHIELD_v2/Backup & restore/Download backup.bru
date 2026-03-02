@@ -1,0 +1,30 @@
+meta {
+  name: Download backup
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{BASE_URL}}/v1/site_backup/download_backup
+  body: json
+  auth: bearer
+}
+
+headers {
+  x-session-id: 349410806783279113
+}
+
+auth:bearer {
+  token: mdHkgrMH4FAbhr6tP451nFaAaI-_wUO-18lRujnl5_iPeD2UDntZFcZkeAYnX0Fj9NhGog2ViAR6Bw
+}
+
+body:json {
+  {
+      "backupId": "aad8af20-efc9-4828-a116-4d872fae6857",
+      "siteId" : "2eb50de90000000000000000"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,30 @@
+meta {
+  name: /user /directPermissions_1
+  type: http
+  seq: 10
+}
+
+delete {
+  url: http://keus-public-lb1-813589603.ap-south-1.elb.amazonaws.com:3002/api/user/65b91166f75b31fe4475257f-e46032672d1b4b0c9263f07830f55b58/directPermissions
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: 123456
+}
+
+body:json {
+  {
+      "directPermission": {
+          "operation": "newone",
+          "resource": [
+              "h*", "hello*"
+          ]
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

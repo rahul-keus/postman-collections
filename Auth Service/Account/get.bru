@@ -1,0 +1,15 @@
+meta {
+  name: get
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://keus-public-lb1-813589603.ap-south-1.elb.amazonaws.com:3002/api/account/65b91160f75b31fe4475257d
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

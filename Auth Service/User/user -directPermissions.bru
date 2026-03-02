@@ -1,0 +1,30 @@
+meta {
+  name: /user /directPermissions
+  type: http
+  seq: 9
+}
+
+patch {
+  url: http://keus-public-lb1-813589603.ap-south-1.elb.amazonaws.com:3002/api/user/65b91160f75b31fe4475257d-d3b496dc5c724091b008a59255c7a2f4/directPermissions
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: 123456
+}
+
+body:json {
+  {
+      "directPermission": {
+          "operation": "subscribe",
+          "resource": [
+              "*"
+          ]
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

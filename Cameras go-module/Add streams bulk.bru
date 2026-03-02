@@ -1,0 +1,40 @@
+meta {
+  name: Add streams bulk
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{BaseUrl}}/add-stream-bulk
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "streams" : [
+          {
+              "streamId": "test-1",
+              "streamUrl": "rtsp://keus-iot-cameras:Keus@dallas1234@10.1.4.96:7447/uuCSetZn161lYZON",
+              // "LocalMp4FilePath": "/keus-iot-platform/.cache/git.worktree/cameras/storage/9b4f27c90e1b6121_1758182840962.mp4",
+              "roomId": "keus-test"
+          },
+          {
+              "streamId": "test-2",
+              "streamUrl": "rtsp://keus-iot-cameras:Keus@dallas1234@10.1.4.96:7447/8qn803cfDjuFyuK1",
+              // "LocalMp4FilePath": "/keus-iot-platform/.cache/git.worktree/cameras/storage/9b4f27c90e1b6121_1758182840962.mp4",
+              "roomId": "keus-test"
+          },
+          {
+              "streamId": "test-3",
+              "streamUrl": "rtsp://admin:cospl@123@10.1.4.57:554/ISAPI/Streaming/Channels/101",
+              // "LocalMp4FilePath": "/keus-iot-platform/.cache/git.worktree/cameras/storage/9b4f27c90e1b6121_1758182840962.mp4",
+              "roomId": "keus-test"
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

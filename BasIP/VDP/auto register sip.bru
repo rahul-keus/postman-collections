@@ -1,0 +1,15 @@
+meta {
+  name: auto register sip
+  type: http
+  seq: 15
+}
+
+get {
+  url: http://10.1.4.23/api/v1/device/sip/reregister
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

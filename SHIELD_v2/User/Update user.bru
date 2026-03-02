@@ -1,0 +1,26 @@
+meta {
+  name: Update user
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{BASE_URL}}/v1/user/update_user
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "user": {
+          "id": "c3ce158e-2eec-4d19-acbb-9c764b605765",
+          "phone": "+91234",
+          "givenName": "test-1",
+          "familyName": "user"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

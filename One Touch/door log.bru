@@ -1,0 +1,22 @@
+meta {
+  name: door log
+  type: http
+  seq: 9
+}
+
+post {
+  url: http://10.1.4.230/api/fe/upgrade
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "target": "doorlog",
+      "action": "get"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

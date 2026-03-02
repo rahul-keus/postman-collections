@@ -1,0 +1,24 @@
+meta {
+  name: Update site
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{BASE_URL}}/v1/site/update_site
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "site": {
+          "id": "995116ab0000000000000000",
+          "address": "updated-11"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,28 @@
+meta {
+  name: install plugin
+  type: http
+  seq: 10
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/api/v1/gateway/install_plugin
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "token":"eyJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwiYWxnIjoiUEJFUzItSFMyNTYrQTEyOEtXIiwia2lkIjoiR2g3bUR5X3Rqa3JSREkyN3NQOG9lWVlOMEpkMW44QkhZcGlhcXNBc1NjMCIsInAycyI6IjUyWGRIN3d4Wm5iSjRkelQyMmpWaXciLCJwMmMiOjgxOTJ9.h4e-2_vJ2jwVYG8OVe7pxeKCjiSD5QaNAm2ECNI-dJsrE9b2Q0OOIg.z_ADeDVvkGGo0HO8UiPi1Q.xyx8diUn0dXv1xjMa4GDtgYoj81stC5iJxfd9h1tTeJORldrtp6VhbUZ_VpitKKBvkXBD8DtiuG49mnlLurp86MSoFsHHSKO10ZdB-S0m7bwFA1JamXTNJtTMHubPgUpK1FkHo7zNGvLuYgCVsjAVkp14k_wWgC35YKhzVZ1-bvbmG2akmVwWC7EMT-PYLVcQDToKuPY9AQC63Z_T_X--BRxTJLiS5AloIP0cwah7_LEChc6v6SIIHecbvez9RGgu0Ov_SekMeEbnRf9qlTm6LTh5kaaSFcozF9GN8OMZlJXg5YQm_eI_N0EawXj98HbwgBKnWLecBRpelPG8BC8ypR6_WSZefF7VDnbNSSuR348KPJ1K_S95tunQrFj_nNQTttAJX3ATQKsTkTvCByHL45yR0vosEPscrIDG6PXRLFhEP1WviLPXWOFSNecwKC38bedYiUPljmrDbUz9MXb5moy73uXPEaW9tGwrE9GWj-jbFuzElF4gBpTojGeBNdGDaYRRZjOMmAA6TKvn_QP9cyNpVFUoB8pZfWKRYUQ0RgTTUoTUEO6XZwdPzTSALfM2bHkeAvh_MZlSrxH6GsqJd18nku7-cIkNDbq-jgRHGd-n8mfzwO3xBALsLEeyf-X1jHMNSkmV1ACB3Hl5nOAaCum42VGzG65_GL9Gsz6Ayu254hp7_EFrV9EGoDEQBPETLNRS9iBKCRd5jTW9ZIGkkoUezXnV7Aa7x-_r_9NjnhUWywRNEVnJ6KHPNOmyro8tSUzhS9iESldFH1rfBmVA-0pUiafBOxhZEmnVg2yTTC06CDllzW5z88bothYuPtWOnC8Uhpr2li3JmiPypO3i1vc32M8mgU9FCil5pJXpmsD4e3UtDnyTQBjvliWRCRio_3n9N9lCJUL3ai5cbIPSbX8-9a1YVA5Hlf1ED87PDKpAwaEJBB2GGuGmEwLLQZ-55BT4t84_MHZ6YBt-ngThD9mHO3gnwBf4tMox7v0PmgNRgFrXJDar1BOTo6nvUh-lcy7OBk45DlyPkZ4gJTAytIPAeyzqjJouHbk-psXhRh_yNs-7CjdRS9gi6oi3YgEtcaKY2KmvCQQK6LoPqNUUW8Xki5nVFN-4zkJHGsOtFdn-M57qQCx1t0Yjwd1mCKaVEa18nG6UqAwvx816aTT7KSQuBIC1Gcjk6_TSgFc_6gKlxtp5Z8kH2fIPoOi0nfDuCQEWKi9Dc1rRy-93hhrOzt809CUtCF9NVzAKfLCLNkMB18oicAF3URewggfKCqPY_CCgh-7R6svNtdY9dakJPXhPI0Lw2ljNH9r5VcNJ5PKhVSwB57h-woA6jcNKmRQauOoU9gjuX6ub5jyBUa1atsfHBM5jbAu2H6Ef84be83gNKFa33RgEtq9dyLQVg2a_Btg4WlPC_UnjSoZLxylXeDknLbINkQa7DDOXWL2m5SgR7D8h6ldJcge4QFptrCWt_iMtPbzZ2Xo_bfsvkPUTzXrJL3mi_5uS4-2IoReIKzEXIwVM4dHIEDIAWQsi2xYSsrOoDsKQnWI_4fdS9JOcv2xmd6J9Ez-KrTH0hSqw-NV3S6A9lYHWHyxk2S-2aiBzwZIXtF4E42O0puJWEsqhc9KVoVLeiCFbpzLra501CNT13RNLj-YS0RX_XHuzWVFvAn9u4Ay_7plllM7t1-lierBeRuqYPIF_GUHei80eNMPWLLPvgLayVDppqGfVsNgLjog8JtDT49k0d93Ictj0PnUhDYU7Vgdxmw-bVv92c2J-BlIUtV4GlMH8z0-_DH5eZzEwI1pnx_iOkyqH2bMjQ.NuyxDOo2a1uh-RwYhZCC-g",
+          "gatewayId":"Keus-6f3e9155-512e-4ff4-890c-a557e254773a",
+          "data": {
+              "nodeId": "l6fqKYU",
+              "launchType": "INTER_PP",
+              "localPluginPath": "/keus-iot-platform/plugins/kiotp.plugins.core.deepmedia.tv.lgtv",
+              "version":"1.0.0"
+          }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,24 @@
+meta {
+  name: Day/Night
+  type: http
+  seq: 13
+}
+
+put {
+  url: http://10.1.4.56/ISAPI/Image/channels/301/IrcutFilter
+  body: xml
+  auth: inherit
+}
+
+body:xml {
+  <?xml version="1.0" encoding="UTF-8"?>
+  <IrcutFilter version="2.0" xmlns="http://www.hikvision.com/ver20/XMLSchema">
+      <IrcutFilterType>night</IrcutFilterType>
+      <nightToDayFilterLevel>4</nightToDayFilterLevel>
+      <nightToDayFilterTime>5</nightToDayFilterTime>
+  </IrcutFilter>
+}
+
+settings {
+  encodeUrl: true
+}

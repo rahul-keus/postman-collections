@@ -1,0 +1,21 @@
+meta {
+  name: DeleteCamera Python
+  type: http
+  seq: 3
+}
+
+delete {
+  url: http://{{NodeHost}}:8083/deleteCamera
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "camera_id": "9b4f27c90e1b6121"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,35 @@
+meta {
+  name: Download Media file
+  type: http
+  seq: 9
+}
+
+get {
+  url: http://10.1.4.124/cgi-bin/loadfile.cgi?action=startLoad&channel=1&startTime=2024-4-18%2010:00:01&endTime=2024-4-18%2010:10:01&subtype=0&Types=dav
+  body: none
+  auth: digest
+}
+
+params:query {
+  action: startLoad
+  channel: 1
+  startTime: 2024-4-18%2010:00:01
+  endTime: 2024-4-18%2010:10:01
+  subtype: 0
+  Types: dav
+}
+
+headers {
+  Content-Type: Audio/G.711A
+  User-Agent: client/1.0
+  ~Content-Length: 999999
+}
+
+auth:digest {
+  username: admin
+  password: admin@123
+}
+
+settings {
+  encodeUrl: true
+}

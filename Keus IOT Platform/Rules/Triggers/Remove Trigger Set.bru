@@ -1,0 +1,22 @@
+meta {
+  name: Remove Trigger Set
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/1.0.0.kiotp.plugins.general.rulesengine/RemoveTriggerSet
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "ruleId": "658a76c23ebbd21017fb079e",
+      "triggerSetId": "658aae7c4269562762205d36"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

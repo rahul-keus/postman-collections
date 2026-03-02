@@ -1,0 +1,21 @@
+meta {
+  name: Delete role
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{BASE_URL}}/v1/role/delete_role
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "roleId" : "e44229c90000000000000000"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

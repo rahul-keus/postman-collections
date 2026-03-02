@@ -1,0 +1,21 @@
+meta {
+  name: Get all zcs entries
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{BASE_URL}}/v1/zigbee_coordinator_store/get_all_zigbee_coordinators
+  body: text
+  auth: inherit
+}
+
+body:text {
+  {
+  
+  }
+}
+
+settings {
+  encodeUrl: true
+}

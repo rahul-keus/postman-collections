@@ -1,0 +1,24 @@
+meta {
+  name: Discover Cameras
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/1.0.0/kiotp.plugins.core.cameras.keus/discoverCameras
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "nvrUserName": "admin",
+      "nvrPassword": "admin@123", 
+      "nvrIp": "10.1.9.64",
+      "deviceModel": "dahua"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

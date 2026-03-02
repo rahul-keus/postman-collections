@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Cameras go-module",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

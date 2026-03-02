@@ -1,0 +1,24 @@
+meta {
+  name: Uninstall Plugin
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/v1/plugin_core/UninstallPlugin
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "services": [{
+          "serviceType": "INTRA_PROCESS",
+          "serviceFile": "/services/plugin-core/index"
+      }]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

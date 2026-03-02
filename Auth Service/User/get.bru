@@ -1,0 +1,25 @@
+meta {
+  name: get
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://keus-public-lb1-813589603.ap-south-1.elb.amazonaws.com:3002/api/user/65e6f63cf5480dd5eee38061-18d8937af4fb4010b11cbde2f2ab1684
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: 123456
+}
+
+body:json {
+  {
+      
+  }
+}
+
+settings {
+  encodeUrl: true
+}

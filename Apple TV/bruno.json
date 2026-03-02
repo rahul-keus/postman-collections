@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Apple TV",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

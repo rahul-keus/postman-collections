@@ -1,0 +1,23 @@
+meta {
+  name: playback
+  type: http
+  seq: 11
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/1.0.0/kiotp.plugins.core.cameras.keus/playBack
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "deviceId": "6697bde601493403e4000460",
+      "startTime": 1727069475000,
+      "endTime": -1
+  }
+}
+
+settings {
+  encodeUrl: true
+}

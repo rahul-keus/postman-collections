@@ -1,0 +1,31 @@
+meta {
+  name: Region Detection
+  type: http
+  seq: 14
+}
+
+get {
+  url: http://10.1.4.151/cgi-bin/configManager.cgi?action=getConfig&name=MotionDetect
+  body: none
+  auth: digest
+}
+
+params:query {
+  action: getConfig
+  name: MotionDetect
+}
+
+headers {
+  ~Content-Type: Audio/G.711A
+  ~Content-Length: 999999
+  ~User-Agent: client/1.0
+}
+
+auth:digest {
+  username: admin
+  password: admin@123
+}
+
+settings {
+  encodeUrl: true
+}

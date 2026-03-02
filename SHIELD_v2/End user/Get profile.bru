@@ -1,0 +1,30 @@
+meta {
+  name: Get profile
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{BASE_URL}}/v1/end_user/get_user_profile
+  body: json
+  auth: bearer
+}
+
+headers {
+  x-session-id: 362160126133534723
+}
+
+auth:bearer {
+  token: WaLrC_dK96u6qkAw3wqEBQYPLdLTm9pGnaDXxP3X01-7Z710wHUnNq9ylrMCJQwFAWHcL6tCJlyb4A
+}
+
+body:json {
+  {
+      // "includeProfilePicturePayload": true,
+      "detailed": true
+  }
+}
+
+settings {
+  encodeUrl: true
+}

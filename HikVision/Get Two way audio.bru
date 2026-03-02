@@ -1,0 +1,15 @@
+meta {
+  name: Get Two way audio
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://10.1.4.52/ISAPI/System/TwoWayAudio/channels
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

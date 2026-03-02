@@ -1,0 +1,15 @@
+meta {
+  name: devices
+  type: http
+  seq: 6
+}
+
+get {
+  url: http://localhost:8080/devices
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

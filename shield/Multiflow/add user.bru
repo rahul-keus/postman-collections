@@ -1,0 +1,31 @@
+meta {
+  name: add user
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://{{NodeHost}}:{{NodePort}}/api/multiflow/add_user
+  body: json
+  auth: inherit
+}
+
+headers {
+  token: oGsLOsH6ede8ixiSfuHMrd61eRBrn9fn5thJa4MA
+}
+
+body:json {
+  {
+      "user": {
+          "id": "xyz------",
+          "name": "test",
+          "siteId": "1234"
+      },
+      "projectEnvironment": "Prod",
+      "projectName": "platform"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

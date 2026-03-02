@@ -1,0 +1,15 @@
+meta {
+  name: deprecate plugin build
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://{{NodeHost}}:{{NodePort}}/api/v1/plugins_store/get_all_plugins
+  body: json
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

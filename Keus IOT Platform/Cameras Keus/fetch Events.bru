@@ -1,0 +1,36 @@
+meta {
+  name: fetch Events
+  type: http
+  seq: 9
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/2.0.0/kiotp.plugins.core.cameras.keus/fetchEvents
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "deviceId": [
+          // "6K042F7PAG2C5B5",
+          // "8E0C35EPAJ2F9F3",
+          // "AC05FC0PCA990BE"
+          // "I20230213AAWRL28326184",
+          // "6697bde601493403e4000460"
+          // "I20230213AAWRL28326174",
+          // "I20230429AAWRL51779612"
+          // "LIU20240318AAWRFB4980056"
+          // "6697bde601493403e4000460"
+      ],
+      "eventType": "",
+      "startTime": 0,
+      "endTime": 0,
+      "summaryFlag": true,
+      "detectionType": ["motion", "person", "ring", "vehicle"]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

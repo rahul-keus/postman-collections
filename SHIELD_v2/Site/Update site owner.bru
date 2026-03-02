@@ -1,0 +1,25 @@
+meta {
+  name: Update site owner
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{BASE_URL}}/v1/site/update_site_owner
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "siteId": "Keus-9ae6811c-1ae9-4c74-8878-d8986573822d",
+      "sessionId": "359292779358060553",
+      // "transfer": true,
+      "siteJWT": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJkZW1vX3VzZXIiLCJ1c2VyTmFtZSI6IkRlbW8gVXNlciIsInNpdGVJZCI6IktldXMtOWFlNjgxMWMtMWFlOS00Yzc0LTg4NzgtZDg5ODY1NzM4MjJkIiwibm9kZUlkIjoibWFuYWdlciIsImlhdCI6MTc3MDY1MDQyNSwiZXhwIjoxNzcwOTUwNDI1LCJpc3MiOiJLZXVzLTlhZTY4MTFjLTFhZTktNGM3NC04ODc4LWQ4OTg2NTczODIyZCJ9.ls1CIDv45tRHpi_RXG0rz-RxO1eSWDiyEu0NXO7IPrQ",
+      "otp" : "283257"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

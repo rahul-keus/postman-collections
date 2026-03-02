@@ -1,0 +1,22 @@
+meta {
+  name: CreateScene
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/1.0.0.kiotp.plugins.core.deepmedia/AddScene
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "name": "Scene-test-1",
+      "roomId": "Home"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,23 @@
+meta {
+  name: command
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:8080/command
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "ip_address": "10.1.4.20",
+      "command": "power_state"
+      // "command": "up"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

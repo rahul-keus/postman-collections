@@ -1,0 +1,26 @@
+meta {
+  name: /user /authenticate
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://keus-public-lb1-813589603.ap-south-1.elb.amazonaws.com:3002/api/user/authenticate
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: 123456
+}
+
+body:json {
+  {
+      "user": "bob102",
+      "pass": "bob"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

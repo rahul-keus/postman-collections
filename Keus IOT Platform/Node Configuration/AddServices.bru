@@ -1,0 +1,48 @@
+meta {
+  name: AddServices
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/v1/node_configuration/AddServices
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "services": [{
+          "id": "site_manager",
+          "serviceType": "INTRA_PROCESS",
+          "instanceCount": 1
+      }]
+  }
+  
+  // {
+  //     "services": [{
+  //         "id": "database",
+  //         "serviceType": "INTRA_PROCESS",
+  //         "instanceCount": 1
+  //     }]
+  // }
+  
+  // {
+  //     "services": [{
+  //         "id": "plugin_core",
+  //         "serviceType": "INTER_PROCESS",
+  //         "instanceCount": 1
+  //     }]
+  // }
+  // {
+  //     "services": [{
+  //         "id": "taskflow",
+  //         "serviceType": "INTRA_PROCESS",
+  //         "instanceCount": 1
+  //     }]
+  // }
+}
+
+settings {
+  encodeUrl: true
+}

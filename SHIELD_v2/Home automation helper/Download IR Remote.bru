@@ -1,0 +1,22 @@
+meta {
+  name: Download IR Remote
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{BASE_URL}}/v1/home_automation/get_remote_file_link
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "remoteType": 3,
+      "remoteId": "N2QAYB000959_PNSNC"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

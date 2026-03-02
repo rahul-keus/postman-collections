@@ -1,0 +1,15 @@
+meta {
+  name: getStream
+  type: http
+  seq: 9
+}
+
+get {
+  url: http://localhost:1984/api/streams
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

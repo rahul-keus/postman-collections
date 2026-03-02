@@ -1,0 +1,32 @@
+meta {
+  name: Live Events
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://10.1.4.5/cgi-bin/eventManager.cgi?action=attach&codes=[All]
+  body: none
+  auth: digest
+}
+
+params:query {
+  action: attach
+  codes: [All]
+}
+
+headers {
+  ~Content-Type: Audio/G.711A
+  ~Content-Length: 999999
+  ~User-Agent: client/1.0
+}
+
+auth:digest {
+  username: admin
+  password: admin@123
+}
+
+settings {
+  encodeUrl: true
+  followRedirects: true
+}

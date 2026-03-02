@@ -1,0 +1,348 @@
+meta {
+  name: feature toggle
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://{{NodeHost}}:{{NodePort}}/api/multiflow/feature_toggle
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "event": "feature_flag.variation_changed",
+    "operator": "tester",
+    "happenedAt": "2025-11-04T12:10:08.6073838Z",
+    "changes": [
+      "Remove variation: pending-handover",
+      "Variation updated to 'beta' with value '{\r\n  \"phoenix_os\": {\r\n    \"os_version\": \"1.0.0\",\r\n    \"agent_version\": \"1.1.0\",\r\n    \"node_manager_version\": \"1.0.0\",\r\n    \"podman_remote_api_version\": \"1.0.0\",\r\n    \"fluent_bit_version\": \"1.0.0\"\r\n  },\r\n  \"raspbian_os\": {\r\n    \"os_version\": \"2.0.0\",\r\n    \"gateway_version\": \"3.3.2-beta\",\r\n    \"agent_version\": \"1.1.3\",\r\n    \"fluent_bit_version\": \"0.1.4\",\r\n    \"pause_gateway_update\": true,\r\n    \"pause_updates\": false\r\n  }\r\n}'",
+      "Variation updated to 'qa-hub' with value '{\r\n    \"phoenix_os\": {\r\n        \"os_version\": \"1.0.0\",\r\n        \"agent_version\": \"1.1.3\",\r\n        \"node_manager_version\": \"1.1.0\",\r\n        \"podman_remote_api_version\": \"1.0.0\",\r\n        \"fluent_bit_version\": \"2.0.0\",\r\n        \"pause_updates\": true\r\n    },\r\n    \"raspbian_os\": {\r\n        \"os_version\": \"2.0.0\",\r\n        \"gateway_version\": \"1.0.2-new_schedules_fix\",\r\n        \"agent_version\": \"1.1.3\",\r\n        \"fluent_bit_version\": \"0.1.5\",\r\n        \"pause_gateway_update\": true,\r\n        \"pause_updates\": true,\r\n        \"testing\": \"hii\"\r\n    }\r\n}'"
+    ],
+    "organization": {
+      "id": "b191580c-32ce-477d-9652-27956a3f0fa5",
+      "name": "Keus"
+    },
+    "project": {
+      "id": "557dafd1-d064-4d86-bee9-b27200ade68d",
+      "name": "platform"
+    },
+    "environment": {
+      "id": "ddf4fb91-1336-41b4-a140-189ecda6bf9a",
+      "name": "Prod"
+    },
+    "data": {
+      "kind": "feature flag",
+      "object": {
+        "id": "83d440b8-7fac-4555-b9f6-b27200b09ca2",
+        "name": "platform-agent",
+        "description": "",
+        "key": "platform-agent",
+        "variationType": "json",
+        "variations": [
+          {
+            "id": "452f0538-d269-4d1b-a9b9-535cf402225a",
+            "name": "main",
+            "value": "{\r\n  \"phoenix_os\": {\r\n    \"os_version\": \"1.0.0\",\r\n    \"agent_version\": \"1.1.0\",\r\n    \"node_manager_version\": \"1.0.0\",\r\n    \"podman_remote_api_version\": \"1.0.0\",\r\n    \"fluent_bit_version\": \"1.0.0\"\r\n  },\r\n  \"raspbian_os\": {\r\n    \"os_version\": \"2.0.0\",\r\n    \"gateway_version\": \"9.4.2-stage\",\r\n    \"agent_version\": \"1.1.3\",\r\n    \"fluent_bit_version\": \"0.1.4\",\r\n    \"pause_gateway_update\": true,\r\n    \"pause_updates\": false\r\n  }\r\n}"
+          },
+          {
+            "id": "a5aee380-d855-446e-a947-16b3957d63a5",
+            "name": "beta",
+            "value": "{\r\n  \"phoenix_os\": {\r\n    \"os_version\": \"1.0.0\",\r\n    \"agent_version\": \"1.1.0\",\r\n    \"node_manager_version\": \"1.0.0\",\r\n    \"podman_remote_api_version\": \"1.0.0\",\r\n    \"fluent_bit_version\": \"1.0.0\"\r\n  },\r\n  \"raspbian_os\": {\r\n    \"os_version\": \"2.0.0\",\r\n    \"gateway_version\": \"3.3.2-beta\",\r\n    \"agent_version\": \"1.1.3\",\r\n    \"fluent_bit_version\": \"0.1.4\",\r\n    \"pause_gateway_update\": true,\r\n    \"pause_updates\": false\r\n  }\r\n}"
+          },
+          {
+            "id": "09728525-16ff-46d5-b967-a178103af219",
+            "name": "alpha",
+            "value": "{\r\n    \"phoenix_os\": {\r\n        \"os_version\": \"1.0.0\",\r\n        \"agent_version\": \"1.0.0\",\r\n        \"node_manager_version\": \"1.0.0\",\r\n        \"podman_remote_api_version\": \"1.0.0\",\r\n        \"fluent_bit_version\": \"1.0.0\",\r\n        \"pause_updates\": true\r\n    },\r\n    \"raspbian_os\": {\r\n        \"os_version\": \"2.0.0\",\r\n        \"gateway_version\": \"9.4.2-stage\",\r\n        \"agent_version\": \"1.1.3\",\r\n        \"fluent_bit_version\": \"0.1.4\",\r\n        \"pause_gateway_update\": true,\r\n        \"pause_updates\": false\r\n    }\r\n}"
+          },
+          {
+            "id": "31bed694-87ba-4055-b274-f929957dde7a",
+            "name": "stage",
+            "value": "{\r\n  \"phoenix_os\": {\r\n    \"os_version\": \"1.0.0\",\r\n    \"agent_version\": \"1.1.0\",\r\n    \"node_manager_version\": \"1.0.0\",\r\n    \"podman_remote_api_version\": \"1.0.0\",\r\n    \"fluent_bit_version\": \"1.0.0\"\r\n  },\r\n  \"raspbian_os\": {\r\n    \"os_version\": \"2.0.0\",\r\n    \"gateway_version\": \"9.4.2-stage\",\r\n    \"agent_version\": \"1.1.3\",\r\n    \"fluent_bit_version\": \"0.1.4\",\r\n    \"pause_gateway_update\": true,\r\n    \"pause_updates\": false\r\n  }\r\n}"
+          },
+          {
+            "id": "8387d840-a8a6-4dea-8039-eeefe55fb5a7",
+            "name": "show-homes",
+            "value": "{\n    \"phoenix_os\": {\n        \"os_version\": \"1.0.0\",\n        \"agent_version\": \"1.1.0\",\n        \"node_manager_version\": \"1.0.0\",\n        \"podman_remote_api_version\": \"1.0.0\",\n        \"fluent_bit_version\": \"1.0.0\"\n    },\n    \"raspbian_os\": {\n        \"os_version\": \"2.0.0\",\n        \"gateway_version\": \"2.7.1-beta\",\n        \"agent_version\": \"1.1.3\",\n        \"fluent_bit_version\": \"0.1.4\",\n        \"pause_gateway_update\": true,\n        \"pause_updates\": false\n    }\n}"
+          },
+          {
+            "id": "0756cbfe-504e-45e9-983e-ffa5d6ffa2e4",
+            "name": "office-setups(HW,Stage,Infra)",
+            "value": "{\n    \"phoenix_os\": {\n        \"os_version\": \"1.0.0\",\n        \"agent_version\": \"1.1.3\",\n        \"node_manager_version\": \"1.1.0\",\n        \"podman_remote_api_version\": \"1.0.0\",\n        \"fluent_bit_version\": \"2.0.0\",\n        \"pause_updates\": true\n    },\n    \"raspbian_os\": {\n        \"os_version\": \"2.0.0\",\n        \"gateway_version\": \"3.3.1-beta\",\n        \"agent_version\": \"1.1.3\",\n        \"fluent_bit_version\": \"0.1.4\",\n        \"pause_gateway_update\": false,\n        \"pause_updates\": false\n    }\n}"
+          },
+          {
+            "id": "09683d45-cd95-41e8-be53-7596334e02c7",
+            "name": "sk-hub",
+            "value": "{\r\n    \"phoenix_os\": {\r\n        \"os_version\": \"1.0.0\",\r\n        \"agent_version\": \"1.1.3\",\r\n        \"node_manager_version\": \"1.1.0\",\r\n        \"podman_remote_api_version\": \"1.0.0\",\r\n        \"fluent_bit_version\": \"2.0.0\",\r\n        \"pause_updates\": true\r\n    },\r\n    \"raspbian_os\": {\r\n        \"os_version\": \"2.0.0\",\r\n        \"gateway_version\": \"9.4.2-stage\",\r\n        \"agent_version\": \"1.1.2\",\r\n        \"fluent_bit_version\": \"0.1.4\",\r\n        \"pause_gateway_update\": false,\r\n        \"pause_updates\": false\r\n    }\r\n}"
+          },
+          {
+            "id": "5f9d431b-87cd-44fd-aa1c-198da3d62444",
+            "name": "dallas-hub",
+            "value": "{\r\n    \"phoenix_os\": {\r\n        \"os_version\": \"1.0.0\",\r\n        \"agent_version\": \"1.1.3\",\r\n        \"node_manager_version\": \"1.1.0\",\r\n        \"podman_remote_api_version\": \"1.0.0\",\r\n        \"fluent_bit_version\": \"2.0.0\",\r\n        \"pause_updates\": true\r\n    },\r\n    \"raspbian_os\": {\r\n        \"os_version\": \"2.0.0\",\r\n        \"gateway_version\": \"2.8.6-beta\",\r\n        \"agent_version\": \"1.1.2\",\r\n        \"fluent_bit_version\": \"0.1.5\",\r\n        \"pause_gateway_update\": true,\r\n        \"pause_updates\": false\r\n    }\r\n}"
+          },
+          {
+            "id": "1883323a-2eb0-4283-8799-c7e7c02a8737",
+            "name": "qa-hub",
+            "value": "{\r\n    \"phoenix_os\": {\r\n        \"os_version\": \"1.0.0\",\r\n        \"agent_version\": \"1.1.3\",\r\n        \"node_manager_version\": \"1.1.0\",\r\n        \"podman_remote_api_version\": \"1.0.0\",\r\n        \"fluent_bit_version\": \"2.0.0\",\r\n        \"pause_updates\": true\r\n    },\r\n    \"raspbian_os\": {\r\n        \"os_version\": \"2.0.0\",\r\n        \"gateway_version\": \"1.0.2-new_schedules_fix\",\r\n        \"agent_version\": \"1.1.3\",\r\n        \"fluent_bit_version\": \"0.1.5\",\r\n        \"pause_gateway_update\": true,\r\n        \"pause_updates\": true,\r\n        \"testing\": \"hii\"\r\n    }\r\n}"
+          },
+          {
+            "id": "e59a3fac-5762-4105-b137-3556686bd514",
+            "name": "uv-logs",
+            "value": "{\r\n  \"phoenix_os\": {\r\n    \"os_version\": \"1.0.0\",\r\n    \"agent_version\": \"1.1.0\",\r\n    \"node_manager_version\": \"1.0.0\",\r\n    \"podman_remote_api_version\": \"1.0.0\",\r\n    \"fluent_bit_version\": \"1.0.0\"\r\n  },\r\n  \"raspbian_os\": {\r\n    \"os_version\": \"2.0.0\",\r\n    \"gateway_version\": \"9.4.2-stage\",\r\n    \"agent_version\": \"1.1.3\",\r\n    \"fluent_bit_version\": \"0.1.4\",\r\n    \"pause_gateway_update\": true,\r\n    \"pause_updates\": false\r\n  }\r\n}"
+          }
+        ],
+        "targetUsers": [
+          {
+            "keyIds": [
+              "Keus-9e3ebade-37c1-4c44-95b8-219db44aaf16-main-platform-agent",
+              "Keus-9e3ebade-37c1-4c44-95b8-219db44aaf16-I2hnFCV1-platform-agent"
+            ],
+            "variationId": "09683d45-cd95-41e8-be53-7596334e02c7"
+          },
+          {
+            "keyIds": [
+              "Keus-199786d6-cf1f-47a7-87d9-af7f2a3ab9b0-Qjrirk4-platform-agent",
+              "Keus-199786d6-cf1f-47a7-87d9-af7f2a3ab9b0-main-platform-agent",
+              "Keus-9ae6811c-1ae9-4c74-8878-d8986573822d-main-platform-agent",
+              "Keus-9ae6811c-1ae9-4c74-8878-d8986573822d-mnXuIfJE-platform-agent"
+            ],
+            "variationId": "5f9d431b-87cd-44fd-aa1c-198da3d62444"
+          },
+          {
+            "keyIds": [
+              "Keus-6f3e9155-512e-4ff4-890c-a557e254773a-main-platform-agent",
+              "Keus-6f3e9155-512e-4ff4-890c-a557e254773a-EqmbNJGj-platform-agent",
+              "Keus-6f3e9155-512e-4ff4-890c-a557e254773a-V6cO8a8-platform-agent",
+              "Keus-63ebe1dd-19b1-4e1d-aedf-2f96d0aa3ae9-main-platform-agent"
+            ],
+            "variationId": "1883323a-2eb0-4283-8799-c7e7c02a8737"
+          },
+          {
+            "keyIds": [
+              "Keus-7d452918-f2fd-4abe-8c95-6e65535c62b4-main-platform-agent"
+            ],
+            "variationId": "e59a3fac-5762-4105-b137-3556686bd514"
+          }
+        ],
+        "rules": [
+          {
+            "id": "28188ea1-ed15-478d-9681-4e90d420bd43",
+            "name": "Office testing",
+            "dispatchKey": null,
+            "includedInExpt": false,
+            "conditions": [
+              {
+                "id": "7a096f52-b04d-4619-9177-224e531369b9",
+                "property": "User is in segment",
+                "op": null,
+                "value": "[\"62b414c0-d43f-47f5-b0a3-b27300ed3f08\"]"
+              }
+            ],
+            "variations": [
+              {
+                "id": "0756cbfe-504e-45e9-983e-ffa5d6ffa2e4",
+                "rollout": [
+                  0,
+                  1
+                ],
+                "exptRollout": 1
+              }
+            ]
+          },
+          {
+            "id": "49425418-5ab9-4fd9-9663-fdb49f5038a8",
+            "name": "Beta sites",
+            "dispatchKey": null,
+            "includedInExpt": false,
+            "conditions": [
+              {
+                "id": "ea4db846-7810-44e1-8420-816278c7296f",
+                "property": "User is in segment",
+                "op": null,
+                "value": "[\"e3203f9c-c591-472d-9e9c-b2880097bf72\"]"
+              }
+            ],
+            "variations": [
+              {
+                "id": "09728525-16ff-46d5-b967-a178103af219",
+                "rollout": [
+                  0,
+                  1
+                ],
+                "exptRollout": 1
+              }
+            ]
+          },
+          {
+            "id": "ae651de0-6afe-4eee-8744-c83f29ba4e6b",
+            "name": "First release - 27 clients",
+            "dispatchKey": null,
+            "includedInExpt": false,
+            "conditions": [
+              {
+                "id": "2b37d0d6-5801-4742-9940-082de849d1c8",
+                "property": "User is in segment",
+                "op": null,
+                "value": "[\"ae0bd456-d02e-4946-9bc7-b28e00ad0f4b\"]"
+              }
+            ],
+            "variations": [
+              {
+                "id": "31bed694-87ba-4055-b274-f929957dde7a",
+                "rollout": [
+                  0,
+                  1
+                ],
+                "exptRollout": 1
+              }
+            ]
+          },
+          {
+            "id": "0c8fac75-9000-495c-8dfa-9826b2babde4",
+            "name": "Show homes",
+            "dispatchKey": null,
+            "includedInExpt": false,
+            "conditions": [
+              {
+                "id": "19e459f5-31e2-4830-9473-c394df9e0dc7",
+                "property": "User is in segment",
+                "op": null,
+                "value": "[\"38a553c2-c5ac-41b6-b975-b29800dbc80f\"]"
+              }
+            ],
+            "variations": [
+              {
+                "id": "8387d840-a8a6-4dea-8039-eeefe55fb5a7",
+                "rollout": [
+                  0,
+                  1
+                ],
+                "exptRollout": 1
+              }
+            ]
+          },
+          {
+            "id": "178f35dd-57fd-4a56-aede-11f38d24e307",
+            "name": "Production",
+            "dispatchKey": "siteId",
+            "includedInExpt": false,
+            "conditions": [
+              {
+                "id": "b6af3163-a551-4996-990d-b0e9fa338e39",
+                "property": "User is in segment",
+                "op": null,
+                "value": "[\"141f2bb0-fbe7-4dcb-8710-b2a500d857bf\"]"
+              }
+            ],
+            "variations": [
+              {
+                "id": "452f0538-d269-4d1b-a9b9-535cf402225a",
+                "rollout": [
+                  0,
+                  0.9
+                ],
+                "exptRollout": 1
+              },
+              {
+                "id": "a5aee380-d855-446e-a947-16b3957d63a5",
+                "rollout": [
+                  0.9,
+                  1
+                ],
+                "exptRollout": 1
+              },
+              {
+                "id": "09728525-16ff-46d5-b967-a178103af219",
+                "rollout": [
+                  1,
+                  1
+                ],
+                "exptRollout": 1
+              },
+              {
+                "id": "31bed694-87ba-4055-b274-f929957dde7a",
+                "rollout": [
+                  1,
+                  1
+                ],
+                "exptRollout": 1
+              },
+              {
+                "id": "8387d840-a8a6-4dea-8039-eeefe55fb5a7",
+                "rollout": [
+                  1,
+                  1
+                ],
+                "exptRollout": 1
+              },
+              {
+                "id": "0756cbfe-504e-45e9-983e-ffa5d6ffa2e4",
+                "rollout": [
+                  1,
+                  1
+                ],
+                "exptRollout": 1
+              },
+              {
+                "id": "09683d45-cd95-41e8-be53-7596334e02c7",
+                "rollout": [
+                  1,
+                  1
+                ],
+                "exptRollout": 1
+              },
+              {
+                "id": "5f9d431b-87cd-44fd-aa1c-198da3d62444",
+                "rollout": [
+                  1,
+                  1
+                ],
+                "exptRollout": 1
+              },
+              {
+                "id": "1883323a-2eb0-4283-8799-c7e7c02a8737",
+                "rollout": [
+                  1,
+                  1
+                ],
+                "exptRollout": 1
+              },
+              {
+                "id": "e59a3fac-5762-4105-b137-3556686bd514",
+                "rollout": [
+                  1,
+                  1
+                ],
+                "exptRollout": 1
+              }
+            ]
+          }
+        ],
+        "isEnabled": true,
+        "disabledVariationId": "452f0538-d269-4d1b-a9b9-535cf402225a",
+        "fallthrough": {
+          "dispatchKey": null,
+          "includedInExpt": true,
+          "variations": [
+            {
+              "id": "452f0538-d269-4d1b-a9b9-535cf402225a",
+              "rollout": [
+                0,
+                1
+              ],
+              "exptRollout": 1
+            }
+          ]
+        },
+        "exptIncludeAllTargets": true,
+        "tags": [],
+        "isArchived": false
+      }
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

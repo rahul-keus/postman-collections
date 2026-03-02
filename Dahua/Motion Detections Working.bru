@@ -1,0 +1,32 @@
+meta {
+  name: Motion Detections Working
+  type: http
+  seq: 13
+}
+
+get {
+  url: http://10.1.4.168/cgi-bin/Log.backup?action=All&condition.StartTime=2024-09-30%2000:55:00&condition.EndTime=2024-09-30%2023:59:59
+  body: none
+  auth: digest
+}
+
+params:query {
+  action: All
+  condition.StartTime: 2024-09-30%2000:55:00
+  condition.EndTime: 2024-09-30%2023:59:59
+}
+
+headers {
+  ~Content-Type: Audio/G.711A
+  ~Content-Length: 999999
+  ~User-Agent: client/1.0
+}
+
+auth:digest {
+  username: admin
+  password: admin@123
+}
+
+settings {
+  encodeUrl: true
+}

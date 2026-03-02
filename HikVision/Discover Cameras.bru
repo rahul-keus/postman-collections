@@ -1,0 +1,20 @@
+meta {
+  name: Discover Cameras
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://10.1.4.52/ISAPI/ContentMgmt/InputProxy/channels
+  body: none
+  auth: digest
+}
+
+auth:digest {
+  username: admin
+  password: cospl@123
+}
+
+settings {
+  encodeUrl: true
+}

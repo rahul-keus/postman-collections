@@ -1,0 +1,19 @@
+meta {
+  name: get event server
+  type: http
+  seq: 6
+}
+
+get {
+  url: https://{{nvrIp}}:20443/openapi/event_server
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyAidXNyIjogImFkbWluIiwgImdycCI6ICJyb290IiwgImV4cCI6ICIyMDI1LTA5LTIzIDExOjQ2OjUxIiB9.WxRaDQA/flQNcHGa4sKixHaEDMLO8B7A1XXhFfGb4thbOr6lXxByffjVPj5fr8duHM0OfC5ed7lyQJA/oQd2S1oCj7O5ABCCTk/gNubDOdHl0xZwL8PMz6QhKQyt3BMOMMYZAfqOIguYzGDMg6LPxg18lCSurpAX7QBZh2trcRE=
+}
+
+settings {
+  encodeUrl: true
+}

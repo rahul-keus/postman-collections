@@ -1,0 +1,52 @@
+meta {
+  name: Publish plugin
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{BASE_URL}}/v1/plugin_store/publish_plugin
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      // "pluginPath": "/keus-iot-platform/packages/plugins-default/plugin-cameras-sip-addon",
+      // "pluginPath": "/keus-iot-platform/packages/plugins-default/plugin-cameras-core",
+      // "pluginPath": "/keus-iot-platform/packages/plugins-default/plugin-cameras-cv-addon",
+      // "pluginPath": "/keus-iot-platform/packages/plugins-default/deepmedia/plugin-core-deepmedia",
+      // "pluginPath": "/keus-iot-platform/packages/plugins-default/deepmedia/plugin-deepmedia-androidtv",
+      // "pluginPath": "/keus-iot-platform/packages/plugins-default/deepmedia/plugin-deepmedia-appletv",
+      // "pluginPath": "/keus-iot-platform/packages/plugins-default/plugin-helloworld-inter",
+      // "pluginPath": "/keus-iot-platform/packages/plugins-default/plugin-helloworld",
+      // "pluginPath": "/keus-iot-platform/packages/plugins-default/device/ac-fan",
+      // "pluginPath": "/keus-iot-platform/packages/plugins-default/device/lights-cv6",
+      // "pluginPath": "/keus-iot-platform/packages/plugins-default/device/lights-cv3",
+      // "pluginPath": "/keus-iot-platform/packages/plugins-default/device/gate",
+      // "pluginPath": "/keus-iot-platform/packages/plugins-default/device/contact-sensor",
+      // "pluginPath": "/keus-iot-platform/packages/plugins-default/device/zigbee-dimmable",
+      // "pluginPath": "/keus-iot-platform/packages/plugins-default/plugin-cameras-sip-addon",
+      "pluginPath": "/keus-iot-platform/packages/plugins-default/core/home-automation",
+      // "pluginPath": "/keus-iot-platform/packages/plugins-default/deepmedia/plugin-deepmedia-lgtv",
+      // "pluginPath": "/keus-iot-platform/packages/plugins-default/device/ac-fan",
+      // "pluginPath": "/keus-iot-platform/packages/plugins-default/deepmedia/plugin-general-rulesengine",
+      // "branch": "camera-livekit"
+      // "branch": "artifact_store"
+      // "buildTag": "pi3-load-test",
+      // "buildTag": "latest",
+      // "branch": "security-core"
+      // "branch": "dev_gateway_restructure_deepmedia"
+      // "branch": "dev_gateway_restructure"
+      // "branch": "ops-cv6"
+      "branch": "hunterdouglas-e2e-flow"
+      // "branch": "camera-motion-plugin"
+      // "branch": "dev_gateway_restructure_deepmedia"
+      // "branch": "shield/feature/artifact_store"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

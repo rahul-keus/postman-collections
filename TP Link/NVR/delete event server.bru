@@ -1,0 +1,21 @@
+meta {
+  name: delete event server
+  type: http
+  seq: 8
+}
+
+post {
+  url: https://{{nvrIp}}:20443/openapi/event_server/delete
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "id": "2"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,23 @@
+meta {
+  name: Get configurartion
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/0.0.1/zigbee_coordinator_service/znp.get_configuration
+  body: text
+  auth: inherit
+}
+
+body:text {
+  {
+      "config":{
+          "channel" : 26
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

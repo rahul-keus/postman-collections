@@ -1,0 +1,24 @@
+meta {
+  name: Update Action
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/1.0.0.kiotp.plugins.general.rulesengine/UpdateAction
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "ruleId": "",
+      "action": {
+          
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

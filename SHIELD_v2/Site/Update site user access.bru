@@ -1,0 +1,31 @@
+meta {
+  name: Update site user access
+  type: http
+  seq: 13
+}
+
+post {
+  url: {{BASE_URL}}/v1/site/enduser.update_site_user_access
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "user": {
+          "phone" : "+919876543210"
+      },
+      "siteId" : "2eb50de90000000000000000",
+      "userAccessInfo": {
+          "accessLevel": 1,
+          "roomsList": ["Home"]
+      },
+      // "userSecurityInfo": {},
+      "siteJWT": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI2ZjJiOWZmMDAwMDAwMDAwMDAwMDAwMCIsInVzZXJJZCI6Iis5MTc1Njk5Mjk2MTciLCJ1c2VyTmFtZSI6bnVsbCwiZGV2aWNlIjp7fSwiaWF0IjoxNzY1ODg2MjcyLCJleHAiOjE3NzM2NjIyNzIsImlzcyI6IjJlYjUwZGU5MDAwMDAwMDAwMDAwMDAwMCJ9.ph25T20TBC9ScXt5t1Lc4Gs6bJTJxFwZXGEmMHFfFvo"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

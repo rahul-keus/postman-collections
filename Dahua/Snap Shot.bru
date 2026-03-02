@@ -1,0 +1,30 @@
+meta {
+  name: Snap Shot
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://10.1.4.168/cgi-bin/snapshot.cgi?channel=1
+  body: none
+  auth: digest
+}
+
+params:query {
+  channel: 1
+}
+
+headers {
+  Content-Type: Audio/G.711A
+  User-Agent: client/1.0
+  ~Content-Length: 999999
+}
+
+auth:digest {
+  username: admin
+  password: admin@123
+}
+
+settings {
+  encodeUrl: true
+}

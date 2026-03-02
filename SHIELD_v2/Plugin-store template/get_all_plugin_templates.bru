@@ -1,0 +1,25 @@
+meta {
+  name: get_all_plugin_templates
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{BASE_URL}}/v1/plugin_template_store/get_all_plugin_templates
+  body: json
+  auth: inherit
+}
+
+headers {
+  ~x-session-id: 234
+}
+
+body:json {
+  {
+  
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,29 @@
+meta {
+  name: add Device
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/1.0.0/kiotp.plugins.core.cameras.keus/addExternalDevice
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "deviceId": "101",
+      "deviceIp": "10.1.4.52",
+      "deviceName": "Living Room",
+      "deviceUserName": "admin",
+      "devicePassword": "password",
+      "deviceType": "camera",
+      "audioSupported": false,
+      "nvrChannelId": 1,
+      "deviceModel": "dahua"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

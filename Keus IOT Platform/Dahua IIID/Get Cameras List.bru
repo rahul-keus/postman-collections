@@ -1,0 +1,15 @@
+meta {
+  name: Get Cameras List
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/1.0.0/kiotp.plugins.core.cameras.keus/getAllCameras
+  body: json
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

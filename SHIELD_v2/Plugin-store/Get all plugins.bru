@@ -1,0 +1,21 @@
+meta {
+  name: Get all plugins
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{BASE_URL}}/v1/plugin_store/get_all_plugins
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+  
+  }
+}
+
+settings {
+  encodeUrl: true
+}

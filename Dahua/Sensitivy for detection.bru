@@ -1,0 +1,32 @@
+meta {
+  name: Sensitivy for detection
+  type: http
+  seq: 18
+}
+
+get {
+  url: http://10.1.4.124/cgi-bin/configManager.cgi?action=getConfig&name=MotionDetect
+  body: json
+  auth: digest
+}
+
+params:query {
+  action: getConfig
+  name: MotionDetect
+}
+
+headers {
+  Cookie: WebClientHttpSessionID=39aa11c2e781da9772a2b8733ec039c8
+  ~Content-Type: Audio/G.711A
+  ~Content-Length: 999999
+  ~User-Agent: client/1.0
+}
+
+auth:digest {
+  username: admin
+  password: admin@123
+}
+
+settings {
+  encodeUrl: true
+}

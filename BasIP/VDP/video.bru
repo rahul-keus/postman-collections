@@ -1,0 +1,21 @@
+meta {
+  name: video
+  type: http
+  seq: 12
+}
+
+post {
+  url: http://10.1.4.218/api/v1/device/settings/video
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "video_resolution": "1280x720"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

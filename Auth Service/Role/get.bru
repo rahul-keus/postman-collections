@@ -1,0 +1,26 @@
+meta {
+  name: get
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://keus-public-lb1-813589603.ap-south-1.elb.amazonaws.com:3002/api/role/65b91166f75b31fe4475257f-e31a946deed041d798e2bfda5d792981
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: 123456
+}
+
+body:json {
+  {
+      "name": "firmware-admin",
+      "accountId": "65b91160f75b31fe4475257d"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

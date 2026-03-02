@@ -1,0 +1,28 @@
+meta {
+  name: StartRecording
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/1.0.0/kiotp.plugins.cameras.cv.addon/StartRecording
+  body: json
+  auth: inherit
+}
+
+body:json {
+  // {
+  //     "camera_id": "I20230429AAWRL51779612",
+  //     "url": "rtsp://admin:cospl@123@10.1.4.56:554/ISAPI/Streaming/Channels/101"
+  // }
+  {
+      "camera_id": "9b4f27c90e1b6121",
+      "url": "rtsp://10.1.4.202:8554/9b4f27c90e1b6121-snapshot",
+      "start_time": 1765889948000,
+      "duration": 30
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,51 @@
+meta {
+  name: get Events
+  type: http
+  seq: 10
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/{{CameraVersion}}/{{CameraId}}/getEvents
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "deviceId": [
+          // "6K042F7PAG2C5B5",
+          // "8E0C35EPAJ2F9F3",
+          // "9A01072PAJB3E1F",
+          // "9b4f27c90e1b6121",
+          // "AC05FC0PCA990BE",
+          "I20230213AAWRL28326184",
+          "I20230201AAWRL23999652",
+          "I20230213AAWRL28326174",
+          "I20230429AAWRL51779612",
+          "LIU20240318AAWRFB4980056"
+          // "6697bde601493403e4000460",
+          // "672dc2b60006a603e400121d",
+          // "8026D9BC652ECD954B2921596D07ECC124514AD7",
+          // "8026A49B1A728729AA4AD9F51E5C3FCB2424EAE7",
+          // "9b4f27c90e1b6121"
+      ],
+      "eventType": "",
+      "startTime": 1770697800000,
+      "endTime": 1770832784000,
+      "limit": 200,
+      "summaryFlag": true,
+      // "filterSummary": true,
+      "detectionType": [
+          "motion"
+          // "person",
+          // "ring",
+          // "vehicle"
+          // "animal"
+          // "smartAudioDetect"
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

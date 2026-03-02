@@ -1,0 +1,15 @@
+meta {
+  name: hangup
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://10.1.4.89/api/call/hangup
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

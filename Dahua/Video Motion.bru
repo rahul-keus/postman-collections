@@ -1,0 +1,25 @@
+meta {
+  name: Video Motion
+  type: http
+  seq: 22
+}
+
+get {
+  url: http://10.1.4.127/cgi-bin/eventManager.cgi?action=getEventIndexes&code=VideoMotion
+  body: none
+  auth: digest
+}
+
+params:query {
+  action: getEventIndexes
+  code: VideoMotion
+}
+
+auth:digest {
+  username: admin
+  password: admin@123
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,43 @@
+meta {
+  name: variation update
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://{{host}}:{{port}}/api/v1/agent/process_variation_update
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "variation": {
+          "deploymentRules": {
+              "pause": false,
+              "window": {
+                  "start": "02:01",
+                  "end": "04:00"
+              }
+          },
+          "platformComponents": {
+              "nodeManager": "1.0.0",
+              "nats": "1.0.0",
+              "fluentBit": "2.0.0",
+              "mongo": "2.0.0",
+              "platformAgent": "1.0.0",
+              "zigbeeCoordinator": "1.0.0",
+              "commonModules": "1.0.0"
+          },
+          "plugins": {
+              "default": [],
+              "updateOnly": [],
+              "uninstall": []
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

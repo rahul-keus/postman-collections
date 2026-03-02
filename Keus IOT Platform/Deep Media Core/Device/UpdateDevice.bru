@@ -1,0 +1,29 @@
+meta {
+  name: UpdateDevice
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/1.0.0.kiotp.plugins.core.deepmedia/UpdateDevice
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+          "deviceId": "6587074c91085fdb85f44d97",
+          "deviceType": "android_tv",
+          "deviceCategory": "tv",
+          "deviceName": "test_tv",
+          "roomId": "HOME",
+          "location": "any where",
+          "version": "1.0.1",
+          "appliances": [],
+          "deviceIP": "10.1.1.5"
+      }
+}
+
+settings {
+  encodeUrl: true
+}

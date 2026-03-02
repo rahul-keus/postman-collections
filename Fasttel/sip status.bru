@@ -1,0 +1,15 @@
+meta {
+  name: sip status
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://10.1.4.89/api/sip/status
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

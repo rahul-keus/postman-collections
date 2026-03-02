@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "One Touch Cloud",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

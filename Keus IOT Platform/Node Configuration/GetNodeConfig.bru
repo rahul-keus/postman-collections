@@ -1,0 +1,15 @@
+meta {
+  name: GetNodeConfig
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/v1/node_configuration/GetNodeConfig
+  body: json
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

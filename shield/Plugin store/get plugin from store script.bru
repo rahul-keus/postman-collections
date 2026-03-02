@@ -1,0 +1,29 @@
+meta {
+  name: get plugin from store script
+  type: http
+  seq: 6
+}
+
+post {
+  url: https://testapp.keus.in/api/v1/plugins_store/get_plugin_from_store_script
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: 
+}
+
+body:json {
+  {
+      "launchType": "INTER",
+      "id": "kiotp.plugins.core.cameras.keus",
+      "version": "1.0.0",
+      "isProduction": true,
+      "buildArchitecture": ""
+  }
+}
+
+settings {
+  encodeUrl: true
+}

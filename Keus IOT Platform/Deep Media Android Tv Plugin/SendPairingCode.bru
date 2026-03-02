@@ -1,0 +1,29 @@
+meta {
+  name: SendPairingCode
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/1.0.0.kiotp.plugins.core.deepmedia.androidtv/SendPairingCode
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "deviceInfo": {
+          "_id": "6587eb71b8b7422d000e2b61",
+          "deviceType": "android_tv",
+          "deviceCategory": "tv",
+          "deviceIP": "10.1.2.188",
+          "certificates": null,
+          "deviceName": "androidTv-ashwik"
+      },
+      "code": "6ED2FD"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

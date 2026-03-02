@@ -1,0 +1,26 @@
+meta {
+  name: add event server
+  type: http
+  seq: 7
+}
+
+post {
+  url: https://{{nvrIp}}:{{port}}/openapi/event_server
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "id": 2,
+      "ip_or_domain": "10.1.4.132",
+      "port": 5000,
+      "url": "/rahul",
+      "protocol": "HTTP",
+      "picture_switch": "off"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

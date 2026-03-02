@@ -1,0 +1,21 @@
+meta {
+  name: get audio and microphone capability
+  type: http
+  seq: 5
+}
+
+post {
+  url: https://{{cameraIp}}:{{port}}/stok={{stok}}
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "method": "getAudioCapability"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

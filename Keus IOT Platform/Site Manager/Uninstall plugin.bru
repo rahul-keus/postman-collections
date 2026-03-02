@@ -1,0 +1,39 @@
+meta {
+  name: Uninstall plugin
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/v1/site_manager/UninstallPlugin
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "nodeId": "node-zGF77gR",
+      // "launchType": "INTER_PP",
+      // "pluginId": "kiotp.plugins.core.deepmedia.tv.appletv",
+      // "pluginId": "kiotp.plugins.general.hubbridge",
+      // "pluginId": "kiotp.plugins.general.rulesengine",
+      // "pluginId": "kiotp.plugins.core.deepmedia.tv.androidtv",
+      // "pluginId": "kiotp.plugins.core.deepmedia",
+      // "pluginId": "kiotp.plugins.core.puppeteer",
+      // "pluginId": "kiotp.plugins.default.core"
+      // "pluginId": "kiotp.plugins.default.helloworld"
+      "pluginId": "kiotp.plugins.default.helloworld-inter"
+      // "pluginId": "kiotp.plugins.core.cameras.keus"
+      // "pluginId": "kiotp.plugins.cameras.sip.addon"
+      // "pluginId": "kiotp.plugins.cameras.cv.addon"
+      
+      // "pluginId": "kiotp.plugins.cameras.core"
+      // "pluginId": "kiotp.plugins.default.core"
+      // "pluginId": "kiotp.plugins.default.device.acfan.plugin"
+      // "version": "2.0.0"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

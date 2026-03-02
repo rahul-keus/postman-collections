@@ -1,0 +1,21 @@
+meta {
+  name: configure MultiNode
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/1.0.0/kiotp.plugins.cameras.multi.node/configureMultiNode
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "redisAddress": "10.1.4.202:6379"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

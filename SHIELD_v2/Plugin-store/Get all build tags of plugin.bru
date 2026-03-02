@@ -1,0 +1,23 @@
+meta {
+  name: Get all build tags of plugin
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{BASE_URL}}/v1/plugin_store/get_available_buildtags_of_plugin
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      // "pluginId" : "kiotp.plugins.default.helloworld"
+      "pluginId" : "kiotp.plugins.default.helloworld-inter"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

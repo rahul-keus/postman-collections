@@ -1,0 +1,35 @@
+meta {
+  name: device Info
+  type: http
+  seq: 2
+}
+
+post {
+  url: https://{{cameraIp}}:{{port}}/stok={{stok}}
+  body: json
+  auth: basic
+}
+
+auth:basic {
+  username: admin
+  password: admin@123
+}
+
+body:json {
+  {
+      // ---------- get device info ----------
+      "method": "getDeviceInfo"
+      // 
+      // ---------- get device status ----------
+      // "method": "getDeviceStatus"
+      // 
+      // ---------- get device Alias ----------
+      // "method": "getDeviceAlias"
+      // 
+      // 
+  }
+}
+
+settings {
+  encodeUrl: true
+}

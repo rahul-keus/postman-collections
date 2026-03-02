@@ -1,0 +1,44 @@
+meta {
+  name: sendCustomNotification
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/1.0.0/kiotp.plugins.default.helloworld.service.NotificationService/sendCustomNotification
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "notification": {
+          "eventId": "a7e1c8b3-9f8e-4b1d-8c2a-5e7d6f0b1a2c",
+          "source": "appliance-monitor-service",
+          "channel": "PUSH",
+          "target": {
+              "userId": "+918087955746"
+          },
+          "payload": {
+              "title": "Security Alert Camera!",
+              "body": "Your device in floor55 requires attention.",
+              "imageUrl": "https://heimdall.keus.in/Keus-dd535a41-a100-4620-aac2-2915574c8243-kiotp.plugins.core.cameras.keus/snapshot/I20230213AAWRL28326184",
+              "locale": "en",
+              "deepLink": "myapp://appliance/kdjkji2",
+              "params": {
+                  "applianceId": "kdjkji2",
+                  "room": "floor12",
+                  "alertCode": "TEMP_HIGH"
+              }
+          },
+          "delivery": {
+              "priority": "HIGH",
+              "ttl": 86400
+          }
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
