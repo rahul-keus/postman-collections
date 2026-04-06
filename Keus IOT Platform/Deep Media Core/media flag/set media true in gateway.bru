@@ -1,0 +1,15 @@
+meta {
+  name: set media true in gateway
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/1.0.0.kiotp.plugins.core.deepmedia/StartKIOTPEventsManager
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

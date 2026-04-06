@@ -1,0 +1,15 @@
+meta {
+  name: IsDeepMediaInstalled
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://{{NodeHost}}:{{NodePort}}/keus/1.0.0.kiotp.plugins.core.deepmedia/IsDeepMediaInstalled
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
